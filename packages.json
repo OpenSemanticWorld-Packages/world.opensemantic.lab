@@ -11,26 +11,9 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
-                {
-                    "name": "HasMassConcentration",
-                    "label": "HasMassConcentration",
-                    "namespace": "NS_PROPERTY",
-                    "urlPath": "Property/HasMassConcentration.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Property/HasMassConcentration.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Property/HasMassConcentration.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Property/HasMassConcentration.slot_jsondata.json"
-                        }
-                    }
-                },
                 {
                     "name": "OSW31ca9a739cb24079b36824045c0832aa",
                     "label": "Material",
