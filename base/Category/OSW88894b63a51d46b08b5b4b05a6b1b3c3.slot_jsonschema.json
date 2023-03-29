@@ -1,0 +1,253 @@
+{
+    "@context": [
+        "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema",
+        {
+            "components*": "Property:HasStatement",
+            "predicate": {
+                "@type": "@id",
+                "@id": "Property:HasProperty"
+            },
+            "object": {
+                "@type": "@id",
+                "@id": "Property:HasObject"
+            },
+            "substatements": {
+                "@type": "@id",
+                "@id": "Property:HasStatement"
+            },
+            "quantity": {
+                "@type": "@id",
+                "@id": "Property:HasProperty"
+            },
+            "value": "Property:HasObject",
+            "unit": "Property:HasUnit"
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "88894b63-a51d-46b0-8b5b-4b05a6b1b3c3",
+    "title": "Sample",
+    "title*": {
+        "en": "Sample",
+        "de": "Probe"
+    },
+    "description": "Material sample created in the lab or collected in the field",
+    "description*": {
+        "en": "Material sample created in the lab or collected in the field",
+        "de": "Im Labor erstellte oder im Feld gesammelte Materialprobe"
+    },
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3"
+            ]
+        },
+        "components": {
+            "type": "array",
+            "format": "tabs",
+            "title": "Components / Constituents",
+            "title*": {
+                "de": "Bestandteile"
+            },
+            "eval_template": {
+                "type": "mustache-wikitext",
+                "mode": "render",
+                "value": "{{#components}} [[{{object}}]] {{#substatements}} {{value}} {{/substatements}} {{/components}} <br>"
+            },
+            "items": {
+                "type": "object",
+                "id": "statement",
+                "title": "Component",
+                "title*": {
+                    "de": "Bestandteil"
+                },
+                "_headerTemplate": "{{self.object}}",
+                "required": [
+                    "uuid",
+                    "predicate",
+                    "object"
+                ],
+                "properties": {
+                    "uuid": {
+                        "title": "UUID",
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "predicate": {
+                        "type": "string",
+                        "format": "autocomplete",
+                        "title": "Predicate",
+                        "title*": {
+                            "de": "Pr\u00e4dikat"
+                        },
+                        "options": {
+                            "grid_columns": 4,
+                            "autocomplete": {
+                                "category": "Category:Property"
+                            },
+                            "hidden": true
+                        },
+                        "default": "Property:HasPart"
+                    },
+                    "object": {
+                        "type": "string",
+                        "format": "autocomplete",
+                        "title": "Substance",
+                        "title*": {
+                            "de": "Substanz"
+                        },
+                        "options": {
+                            "grid_columns": 4,
+                            "autocomplete": {
+                                "category": "Category:OSW0583b134c618484c9911a3dff145c7eb",
+                                "query_filter_property": "HasName"
+                            }
+                        }
+                    },
+                    "substatements": {
+                        "title": "Amounts",
+                        "title*": {
+                            "de": "Mengen"
+                        },
+                        "type": "array",
+                        "format": "tabs",
+                        "propertyOrder": 1010,
+                        "items": {
+                            "type": "object",
+                            "id": "statement",
+                            "title": "Amount",
+                            "title*": {
+                                "de": "Menge"
+                            },
+                            "headerTemplate": "{{self.value}}",
+                            "required": [
+                                "uuid",
+                                "quantity",
+                                "value",
+                                "unit",
+                                "unit_symbol",
+                                "numerical_value"
+                            ],
+                            "properties": {
+                                "uuid": {
+                                    "title": "UUID",
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "options": {
+                                        "hidden": true
+                                    }
+                                },
+                                "quantity": {
+                                    "type": "string",
+                                    "format": "autocomplete",
+                                    "title": "Property",
+                                    "title*": {
+                                        "de": "Attribut"
+                                    },
+                                    "options": {
+                                        "grid_columns": 4,
+                                        "autocomplete": {
+                                            "category": "Category:QuantityProperty"
+                                        }
+                                    },
+                                    "default": "Property:HasMassConcentration"
+                                },
+                                "numerical_value": {
+                                    "type": "string",
+                                    "format": "number",
+                                    "title": "Value",
+                                    "title*": {
+                                        "de": "Wert"
+                                    },
+                                    "options": {
+                                        "grid_columns": 2
+                                    }
+                                },
+                                "unit": {
+                                    "type": "string",
+                                    "format": "autocomplete",
+                                    "title": "Unit",
+                                    "title*": {
+                                        "de": "Einheit"
+                                    },
+                                    "watch": {
+                                        "quantity": "statement.quantity",
+                                        "unit_symbol": "statement.unit_symbol"
+                                    },
+                                    "options": {
+                                        "grid_columns": 2,
+                                        "autocomplete": {
+                                            "query": "[[-HasInputUnit::{{$(quantity)}}]]|?Display_title_of=label",
+                                            "render_template": {
+                                                "type": [
+                                                    "handlebars"
+                                                ],
+                                                "value": "{{result.printouts.label.[0]}}"
+                                            },
+                                            "field_maps": [
+                                                {
+                                                    "source_path": "$",
+                                                    "template": "{{{result.printouts.label.[0]}}}",
+                                                    "target_path": "$(unit_symbol)"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "unit_symbol": {
+                                    "type": "string",
+                                    "options": {
+                                        "hidden": true
+                                    }
+                                },
+                                "value": {
+                                    "type": "string",
+                                    "title": "Value",
+                                    "title*": {
+                                        "de": "Wert"
+                                    },
+                                    "watch": {
+                                        "numerical_value": "statement.numerical_value",
+                                        "unit_symbol": "statement.unit_symbol"
+                                    },
+                                    "template": "{{{numerical_value}}} {{{unit_symbol}}}",
+                                    "options": {
+                                        "hidden": true
+                                    }
+                                }
+                            }
+                        },
+                        "options": {
+                            "grid_columns": 12
+                        }
+                    }
+                }
+            }
+        },
+        "statements": {
+            "items": {
+                "default": {
+                    "type": "object_statement",
+                    "predicate": "Property:HasPart",
+                    "substatements": [
+                        {
+                            "type": "quantity_statement",
+                            "quantity": "Property:HasMass",
+                            "unit": "Property:HasMass#OSW2b1a3a39eceb4249b86897def91134dc"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

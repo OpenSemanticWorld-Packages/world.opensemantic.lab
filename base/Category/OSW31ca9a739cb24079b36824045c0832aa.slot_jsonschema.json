@@ -1,0 +1,32 @@
+{
+    "@context": [
+        "/wiki/Category:Item?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:Item?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "31ca9a73-9cb2-4079-b368-24045c0832aa",
+    "title": "Material",
+    "title*": {
+        "en": "Material",
+        "de": "Material"
+    },
+    "description": "Contains chemical substances and engineered matterials / parts",
+    "description*": {
+        "en": "Contains chemical substances and engineered matterials / parts",
+        "de": "Enth\u00e4lt chemische Stoffe, Materialien und Bauteile"
+    },
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW31ca9a739cb24079b36824045c0832aa"
+            ]
+        }
+    }
+}

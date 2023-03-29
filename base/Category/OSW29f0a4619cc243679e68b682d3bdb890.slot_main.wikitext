@@ -1,0 +1,10 @@
+==Map Overview==
+
+
+{{#ask: [[{{FULLPAGENAME}}]]
+  | ?HasLocation.HasGpsCoordinates=location
+  | ?HasPart.HasName=Compound
+ |format=leaflet
+ |template=Helper/UI/Query/Statements
+ |showtitle=off
+ }}

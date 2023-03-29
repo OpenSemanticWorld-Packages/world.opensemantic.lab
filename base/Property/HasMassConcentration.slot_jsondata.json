@@ -1,0 +1,56 @@
+{
+    "main_unit": {
+        "uuid": "b10f2e1c-cd56-485a-8d78-87ff12bc3881",
+        "name": "kg/m\u00b3",
+        "main_symbol": "kg/m\u00b3",
+        "alternative_symbols": [
+            "kg/m^3",
+            "kgm^-3"
+        ],
+        "use_as_input_unit": false,
+        "use_as_display_unit": false,
+        "ontology_iri": [
+            "https://qudt.org/vocab/quantitykind/MassConcentration"
+        ]
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "1",
+            "uuid": "7f705f70-d452-4a06-aff5-c8ca823ef65e",
+            "name": "g/l",
+            "main_symbol": "g/l",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": true,
+            "ontology_iri": []
+        },
+        {
+            "conversion_factor_to_main_unit": "1000",
+            "uuid": "0d9cb8a1-b4e7-4bb5-8c57-30806dcce51e",
+            "name": "mg/l",
+            "main_symbol": "mg/l",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": true,
+            "ontology_iri": []
+        }
+    ],
+    "type": [
+        "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
+    ],
+    "property_type": "Quantity",
+    "name": "HasMassConcentration",
+    "uuid": "0d916735-2cc6-4bf4-afb2-96fb0ea119bb",
+    "label": [
+        {
+            "text": "Mass Concentration",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "text": "Gravimetric concentration",
+            "lang": "en"
+        }
+    ]
+}

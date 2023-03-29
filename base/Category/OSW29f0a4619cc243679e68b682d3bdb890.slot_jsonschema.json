@@ -1,0 +1,47 @@
+{
+    "@context": [
+        "/wiki/Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3?action=raw&slot=jsonschema",
+        {
+            "location": {
+                "@id": "Property:HasLocation",
+                "@type": "@id"
+            }
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "29f0a461-9cc2-4367-9e68-b682d3bdb890",
+    "title": "GeoSample",
+    "title*": {
+        "en": "Geo Sample"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW29f0a4619cc243679e68b682d3bdb890"
+            ]
+        },
+        "location": {
+            "type": "string",
+            "format": "autocomplete",
+            "title": "Sampling Site",
+            "title*": {
+                "de": "Entnahmeort"
+            },
+            "options": {
+                "autocomplete": {
+                    "category": "Category:OSW473d7a1ed48544d1be83b258b5810948"
+                }
+            }
+        }
+    }
+}

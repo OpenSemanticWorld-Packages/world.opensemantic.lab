@@ -1,0 +1,33 @@
+{
+    "type": [
+        "Category:Category"
+    ],
+    "subclass_of": [
+        "Category:OSW31ca9a739cb24079b36824045c0832aa"
+    ],
+    "uuid": "88894b63-a51d-46b0-8b5b-4b05a6b1b3c3",
+    "name": "Sample",
+    "label": [
+        {
+            "text": "Sample",
+            "lang": "en"
+        },
+        {
+            "text": "Probe",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Material sample created in the lab or collected in the field",
+            "lang": "en"
+        },
+        {
+            "text": "Im Labor erstellte oder im Feld gesammelte Materialprobe",
+            "lang": "de"
+        }
+    ],
+    "utf8_icon": [
+        "\ud83e\uddea"
+    ]
+}

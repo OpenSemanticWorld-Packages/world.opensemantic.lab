@@ -1,0 +1,35 @@
+{
+    "type": [
+        "Category:Category"
+    ],
+    "subclass_of": [
+        "Category:Item"
+    ],
+    "uuid": "31ca9a73-9cb2-4079-b368-24045c0832aa",
+    "label": [
+        {
+            "text": "Material",
+            "lang": "en"
+        },
+        {
+            "text": "Material",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Contains chemical substances and engineered matterials / parts",
+            "lang": "en"
+        },
+        {
+            "text": "Enth\u00e4lt chemische Stoffe, Materialien und Bauteile",
+            "lang": "de"
+        }
+    ],
+    "utf8_icon": [
+        "\u2697",
+        "\u269b",
+        "\u2696"
+    ],
+    "name": "Material"
+}

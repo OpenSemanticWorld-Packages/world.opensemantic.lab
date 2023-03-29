@@ -1,0 +1,117 @@
+{
+    "publisher": "OpenSemanticWorld",
+    "publisherURL": "https://github.com/OpenSemanticWorld-Packages/world.opensemantic.lab",
+    "author": [
+        "Simon Stier"
+    ],
+    "language": "en",
+    "licenseName": "CC BY-NC 4.0",
+    "packages": {
+        "OSW Lab": {
+            "globalID": "world.opensemantic.lab",
+            "label": "OSW Lab",
+            "description": "For material science, etc.",
+            "version": "0.1.0",
+            "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
+            "pages": [
+                {
+                    "name": "HasMassConcentration",
+                    "label": "HasMassConcentration",
+                    "namespace": "NS_PROPERTY",
+                    "urlPath": "Property/HasMassConcentration.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasMassConcentration.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasMassConcentration.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasMassConcentration.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSW31ca9a739cb24079b36824045c0832aa",
+                    "label": "Material",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSW0583b134c618484c9911a3dff145c7eb",
+                    "label": "ChemicalCompound",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSW88894b63a51d46b08b5b4b05a6b1b3c3",
+                    "label": "Sample",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW88894b63a51d46b08b5b4b05a6b1b3c3.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW88894b63a51d46b08b5b4b05a6b1b3c3.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW88894b63a51d46b08b5b4b05a6b1b3c3.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW88894b63a51d46b08b5b4b05a6b1b3c3.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW88894b63a51d46b08b5b4b05a6b1b3c3.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSW29f0a4619cc243679e68b682d3bdb890",
+                    "label": "GeoSample",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW29f0a4619cc243679e68b682d3bdb890.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW29f0a4619cc243679e68b682d3bdb890.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW29f0a4619cc243679e68b682d3bdb890.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW29f0a4619cc243679e68b682d3bdb890.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW29f0a4619cc243679e68b682d3bdb890.slot_jsonschema.json"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
