@@ -1,0 +1,33 @@
+{
+    "type": [
+        "Category:Category"
+    ],
+    "subclass_of": [
+        "Category:OSWe5aa96bffb1c4d95be7fbd46142ad203"
+    ],
+    "uuid": "0e7fab22-62fb-4427-ad0f-a454bc868a0d",
+    "name": "ElnEntry",
+    "label": [
+        {
+            "text": "ELN Entry",
+            "lang": "en"
+        },
+        {
+            "text": "Laborbucheintrag",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Contains notes and data about experiments",
+            "lang": "en"
+        },
+        {
+            "text": "Enth\u00e4lt Notizen und Daten \u00fcber Experimente",
+            "lang": "de"
+        }
+    ],
+    "utf8_icon": [
+        "\ud83d\udcd3"
+    ]
+}

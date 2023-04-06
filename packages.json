@@ -11,7 +11,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
                 {
@@ -95,25 +95,22 @@
                     }
                 },
                 {
-                    "name": "OSWe5aa96bffb1c4d95be7fbd46142ad203",
-                    "label": "Process",
+                    "name": "OSW0e7fab2262fb4427ad0fa454bc868a0d",
+                    "label": "ElnEntry",
                     "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_main.wikitext",
+                    "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_main.wikitext",
                     "slots": {
                         "footer": {
-                            "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_footer.wikitext"
-                        },
-                        "footer_template": {
-                            "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_footer_template.wikitext"
+                            "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_footer.wikitext"
                         },
                         "header": {
-                            "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_header.wikitext"
+                            "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_header.wikitext"
                         },
                         "jsondata": {
-                            "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_jsondata.json"
+                            "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_jsondata.json"
                         },
                         "jsonschema": {
-                            "urlPath": "Category/OSWe5aa96bffb1c4d95be7fbd46142ad203.slot_jsonschema.json"
+                            "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_jsonschema.json"
                         }
                     }
                 }

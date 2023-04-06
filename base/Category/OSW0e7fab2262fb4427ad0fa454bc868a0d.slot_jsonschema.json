@@ -1,0 +1,143 @@
+{
+    "@context": [
+        "/wiki/Category:OSWe5aa96bffb1c4d95be7fbd46142ad203?action=raw&slot=jsonschema",
+        {
+            "orderer": {
+                "@id": "Property:HasOrderer",
+                "@type": "@id"
+            },
+            "contact": {
+                "@id": "Property:HasContact",
+                "@type": "@id"
+            },
+            "project": {
+                "@id": "Property:HasProject",
+                "@type": "@id"
+            },
+            "keywords": {
+                "@id": "Property:HasKeyword"
+            }
+        }
+    ],
+    "uuid": "0e7fab22-62fb-4427-ad0f-a454bc868a0d",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWe5aa96bffb1c4d95be7fbd46142ad203?action=raw&slot=jsonschema"
+        }
+    ],
+    "title": "ElnEntry",
+    "title*": {
+        "de": "Laborbucheintrag",
+        "en": "ELN Entry"
+    },
+    "description": "Contains notes and data about experiments",
+    "description*": {
+        "de": "Enth\u00e4lt Notizen und Daten \u00fcber Experimente",
+        "en": "Contains notes and data about experiments"
+    },
+    "properties": {
+        "collection": {
+            "type": "boolean",
+            "format": "checkbox",
+            "title": "Experiment-Collection",
+            "title*": {
+                "de": "Experiment/Versuchsreihe"
+            },
+            "description": "",
+            "description*": {
+                "de": "Stellt eine Sammlung von Laborbucheintragen dar."
+            }
+        },
+        "display_id": {
+            "type": "boolean",
+            "format": "checkbox",
+            "title": "Include ID in name",
+            "title*": {
+                "de": "ID im Namen anzeigen"
+            },
+            "description": "",
+            "description*": {
+                "de": "ID hinter dem Namen einblenden. Falls kein Name vorhanden ist wird immer die ID angezeigt."
+            }
+        },
+        "orderer": {
+            "type": "string",
+            "format": "autocomplete",
+            "title": "Orderer",
+            "title*": {
+                "de": "Auftraggeber"
+            },
+            "description": "",
+            "description*": {
+                "de": "Interner oder externer Kunde"
+            },
+            "options": {
+                "autocomplete": {
+                    "category": "Category:OSW3cb8cef2225e403092f098f99bc4c472"
+                }
+            }
+        },
+        "contact": {
+            "type": "string",
+            "format": "autocomplete",
+            "title": "Contact",
+            "title*": {
+                "de": "Ansprechpartner"
+            },
+            "description": "",
+            "description*": {
+                "de": "Kontakt seitens Auftraggeber"
+            },
+            "options": {
+                "autocomplete": {
+                    "category": "Category:OSW44deaa5b806d41a2a88594f562b110e9"
+                }
+            }
+        },
+        "project": {
+            "type": "string",
+            "format": "autocomplete",
+            "title": "Project",
+            "title*": {
+                "de": "Projekt"
+            },
+            "description": "",
+            "description*": {
+                "de": "Zugeordnetes Projekt. Von diesem werden auch die Zugriffsrechte \u00fcbernommen"
+            },
+            "options": {
+                "autocomplete": {
+                    "category": "Category:OSWb2d7e6a2eff94c82b7f1f2699d5b0ee3"
+                }
+            }
+        },
+        "keywords": {
+            "type": "array",
+            "title": "Keywords",
+            "title*": {
+                "de": "Schlagw\u00f6rter"
+            },
+            "items": {
+                "type": "",
+                "format": "",
+                "title": "Keyword",
+                "title*": {
+                    "de": "Schlagwort"
+                }
+            },
+            "description": "",
+            "description*": {
+                "de": ""
+            }
+        },
+        "type": {
+            "default": [
+                "Category:OSW0e7fab2262fb4427ad0fa454bc868a0d"
+            ]
+        }
+    },
+    "required": [
+        "type"
+    ]
+}
