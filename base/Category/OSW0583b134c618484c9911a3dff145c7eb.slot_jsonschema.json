@@ -26,12 +26,7 @@
                 "pubchem_cid"
             ],
             "object_map": {
-                "cas_numbers": "$..[?(@.TOCHeading=='CAS')].Information..Value.StringWithMarkup..String",
-                "exploit2": "$..[?(console.log('TEST');)]"
-            },
-            "insecure_maps": {
-                "exploit1": "$..[?((function a(arr){a([...arr, ...arr])})([1]);)]",
-                "exploit2": "$..[?(console.log('TEST');)]"
+                "cas_numbers": "$..[?(@.TOCHeading=='CAS')].Information..Value.StringWithMarkup..String"
             }
         }
     ],
@@ -43,7 +38,14 @@
                 "conditional_visible": {
                     "modes": "query"
                 }
-            }
+            },
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "[https://pubchem.ncbi.nlm.nih.gov/compound/{{pubchem_cid}} {{pubchem_cid}}]"
+                }
+            ]
         },
         "cas_numbers": {
             "type": "array",
@@ -65,8 +67,10 @@
             ]
         }
     },
-    "description": "",
-    "description*": {},
+    "description": "Chemical substance composed of many identical molecules",
+    "description*": {
+        "en": "Chemical substance composed of many identical molecules"
+    },
     "required": [
         "type"
     ]

@@ -1,0 +1,6 @@
+== Created Instances ==
+
+{{#ask: [[{{FULLPAGENAME}}]]
+|?HasDescription=Description|+lang=en
+|format=datatable
+}}

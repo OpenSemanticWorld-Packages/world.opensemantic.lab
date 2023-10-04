@@ -6,9 +6,9 @@
         "Category:OSW31ca9a739cb24079b36824045c0832aa"
     ],
     "utf8_icon": [
+        "\ud83e\udd4f",
         "\u2697",
-        "\u2696",
-        "\ud83e\udd4f"
+        "\u2696"
     ],
     "uuid": "0583b134-c618-484c-9911-a3dff145c7eb",
     "name": "ChemicalCompound",
@@ -20,6 +20,12 @@
         {
             "text": "Chemische Verbindung",
             "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Chemical substance composed of many identical molecules",
+            "lang": "en"
         }
     ]
 }

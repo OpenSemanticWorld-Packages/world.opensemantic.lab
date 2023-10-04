@@ -11,7 +11,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
                 {

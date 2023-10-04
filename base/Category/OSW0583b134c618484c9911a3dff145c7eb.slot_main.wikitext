@@ -1,0 +1,6 @@
+== Created Instances ==
+
+{{#ask: [[{{FULLPAGENAME}}]]
+|?HasPubchemId=PubChem CID
+|format=datatable
+}}
