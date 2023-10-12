@@ -1,0 +1,72 @@
+{
+    "main_unit": {
+        "uuid": "583190e9-55a2-45a0-a88c-dc4b60d1de92",
+        "name": "$",
+        "main_symbol": "$",
+        "alternative_symbols": [],
+        "use_as_input_unit": true,
+        "use_as_display_unit": true,
+        "ontology_iri": []
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "0.95",
+            "uuid": "a58c8789-101f-4772-877d-f5f7d858d14c",
+            "name": "\u20ac",
+            "main_symbol": "\u20ac",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": true,
+            "ontology_iri": []
+        },
+        {
+            "conversion_factor_to_main_unit": "0.001",
+            "uuid": "10dc33d9-f996-4921-85f0-438a27e4d86c",
+            "name": "k$",
+            "main_symbol": "k$",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": false,
+            "ontology_iri": []
+        },
+        {
+            "conversion_factor_to_main_unit": "0.00950",
+            "uuid": "7ca0686c-2f27-4d9c-8466-c29a48af9ef3",
+            "name": "k\u20ac",
+            "main_symbol": "k\u20ac",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": false,
+            "ontology_iri": []
+        }
+    ],
+    "type": [
+        "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
+    ],
+    "property_type": "Quantity",
+    "name": "HasMonetaryValue",
+    "ontology_iri": [
+        "https://gpo.ontology.link/GPO_ac60cfc4_1500_41a4_9cf0_b5045155830e"
+    ],
+    "uuid": "892173e9-fc55-44bd-827f-8d48fc861e49",
+    "label": [
+        {
+            "text": "MonetaryValue",
+            "lang": "en"
+        },
+        {
+            "text": "Geldwert",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Links a subject with a currency value",
+            "lang": "en"
+        },
+        {
+            "text": "Verkn\u00fcpft ein Subjekt mit einem Geldwert",
+            "lang": "en"
+        }
+    ]
+}

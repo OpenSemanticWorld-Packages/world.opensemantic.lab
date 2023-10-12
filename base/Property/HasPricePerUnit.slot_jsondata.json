@@ -1,0 +1,33 @@
+{
+    "subproperty_of": "Property:HasPerUnitMonetaryValue",
+    "base_property": "Property:HasPerUnitMonetaryValue",
+    "type": [
+        "Category:OSW69f251a900944602a08d1cca830249b5"
+    ],
+    "property_type": "Quantity",
+    "name": "HasPricePerUnit",
+    "uuid": "17ed65f0-362c-4b86-923b-de9f79afc892",
+    "label": [
+        {
+            "text": "PricePerUnit",
+            "lang": "en"
+        },
+        {
+            "text": "St\u00fcckpreis",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "The price per unit of a countable good",
+            "lang": "en"
+        },
+        {
+            "text": "Der St\u00fcckpreis eines abz\u00e4hlbaren Gutes",
+            "lang": "de"
+        }
+    ],
+    "ontology_iri": [
+        "https://gpo.ontology.link/GPO_0597e385_8c91_4e7f_aa25_c75b5b9b80b6"
+    ]
+}

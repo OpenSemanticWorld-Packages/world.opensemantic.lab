@@ -1,0 +1,33 @@
+{
+    "subproperty_of": "Property:HasVolumetricMonetaryValue",
+    "base_property": "Property:HasVolumetricMonetaryValue",
+    "type": [
+        "Category:OSW69f251a900944602a08d1cca830249b5"
+    ],
+    "property_type": "Quantity",
+    "name": "HasPricePerVolume",
+    "uuid": "0b1245e6-1b91-4270-89db-1905f65d5b1b",
+    "label": [
+        {
+            "text": "PricePerVolume",
+            "lang": "en"
+        },
+        {
+            "text": "PreisProVolumen",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "The price per volume, e. g. per liter",
+            "lang": "en"
+        },
+        {
+            "text": "Der Preis pro Volumen, z. B. Literpreis",
+            "lang": "de"
+        }
+    ],
+    "ontology_iri": [
+        "https://gpo.ontology.link/GPO_f352a440_5fbd_42c6_bff1_e70f0e652043"
+    ]
+}

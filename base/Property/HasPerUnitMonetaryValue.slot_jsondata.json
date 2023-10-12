@@ -1,0 +1,64 @@
+{
+    "main_unit": {
+        "uuid": "db68f15b-dfc2-44c1-8102-87787537d89a",
+        "name": "$/[1]",
+        "main_symbol": "$/[1]",
+        "alternative_symbols": [
+            "$/p",
+            "$/St",
+            "$/u",
+            "$"
+        ],
+        "use_as_input_unit": true,
+        "use_as_display_unit": true,
+        "ontology_iri": []
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "0.95",
+            "uuid": "ae07ddc5-d4e1-4ac8-8968-c2335fb8d5c9",
+            "name": "\u20ac/[1]",
+            "main_symbol": "\u20ac/[1]",
+            "alternative_symbols": [
+                "\u20ac/p",
+                "\u20ac/St",
+                "\u20ac"
+            ],
+            "use_as_input_unit": false,
+            "use_as_display_unit": false,
+            "ontology_iri": []
+        }
+    ],
+    "type": [
+        "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
+    ],
+    "property_type": "Quantity",
+    "name": "HasPerUnitMonetaryValue",
+    "uuid": "2fa7ae29-1d08-4ae0-b159-6f26454eaea5",
+    "label": [
+        {
+            "text": "PerUnitMonetaryValue",
+            "lang": "en"
+        },
+        {
+            "text": "St\u00fcckzahl bezogener Geldwert",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Currency value per unit (u) or piece (p)",
+            "lang": "en"
+        },
+        {
+            "text": "Geldwert pro Einheit (u) bzw. St\u00fcck (St)",
+            "lang": "de"
+        }
+    ],
+    "proportional_to": [
+        "Property:HasMonetaryValue"
+    ],
+    "inverse_proportional_to": [
+        "Property:HasCount"
+    ]
+}

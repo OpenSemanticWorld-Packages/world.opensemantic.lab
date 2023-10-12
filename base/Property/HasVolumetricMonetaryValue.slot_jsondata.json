@@ -1,0 +1,59 @@
+{
+    "main_unit": {
+        "uuid": "25d57f40-f3d0-477c-af6d-f0aef213ab83",
+        "name": "$/l",
+        "main_symbol": "$/l",
+        "alternative_symbols": [
+            "$/L"
+        ],
+        "use_as_input_unit": true,
+        "use_as_display_unit": true,
+        "ontology_iri": []
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "0.95",
+            "uuid": "7c30047d-d84a-4e75-8452-07bc1204ffab",
+            "name": "\u20ac/l",
+            "main_symbol": "\u20ac/l",
+            "alternative_symbols": [
+                "\u20ac/L"
+            ],
+            "use_as_input_unit": false,
+            "use_as_display_unit": false,
+            "ontology_iri": []
+        }
+    ],
+    "type": [
+        "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
+    ],
+    "property_type": "Quantity",
+    "name": "HasVolumetricMonetaryValue",
+    "uuid": "9a83fc02-a9cb-4a0f-83e9-2b29932001ee",
+    "label": [
+        {
+            "text": "VolumetricMonetaryValue",
+            "lang": "en"
+        },
+        {
+            "text": "Volumenbezogener Geldwert",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Currency value per volume",
+            "lang": "en"
+        },
+        {
+            "text": "Geldwert pro Volumen",
+            "lang": "de"
+        }
+    ],
+    "proportional_to": [
+        "Property:HasMonetaryValue"
+    ],
+    "inverse_proportional_to": [
+        "Property:HasVolume"
+    ]
+}

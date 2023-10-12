@@ -11,7 +11,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
                 {
@@ -111,6 +111,193 @@
                         },
                         "jsonschema": {
                             "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasCount",
+                    "label": "HasCount",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasCount.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasCount.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasCount.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasCount.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasMass",
+                    "label": "HasMass",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasMass.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasMass.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasMass.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasMass.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasVolume",
+                    "label": "HasVolume",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasVolume.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasVolume.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasVolume.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasVolume.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasMassConcentration",
+                    "label": "HasMassConcentration",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasMassConcentration.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasMassConcentration.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasMassConcentration.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasMassConcentration.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasMonetaryValue",
+                    "label": "HasMonetaryValue",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasMonetaryValue.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasMonetaryValue.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasMonetaryValue.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasMonetaryValue.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasGravimetricMonetaryValue",
+                    "label": "HasGravimetricMonetaryValue",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasGravimetricMonetaryValue.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasGravimetricMonetaryValue.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasGravimetricMonetaryValue.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasGravimetricMonetaryValue.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasPricePerWeight",
+                    "label": "HasPricePerWeight",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasPricePerWeight.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasPricePerWeight.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasPricePerWeight.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasPricePerWeight.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasVolumetricMonetaryValue",
+                    "label": "HasVolumetricMonetaryValue",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasVolumetricMonetaryValue.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasVolumetricMonetaryValue.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasVolumetricMonetaryValue.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasVolumetricMonetaryValue.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasPricePerVolume",
+                    "label": "HasPricePerVolume",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasPricePerVolume.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasPricePerVolume.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasPricePerVolume.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasPricePerVolume.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasPerUnitMonetaryValue",
+                    "label": "HasPerUnitMonetaryValue",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasPerUnitMonetaryValue.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasPerUnitMonetaryValue.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasPerUnitMonetaryValue.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasPerUnitMonetaryValue.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasPricePerUnit",
+                    "label": "HasPricePerUnit",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasPricePerUnit.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasPricePerUnit.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasPricePerUnit.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasPricePerUnit.slot_jsondata.json"
                         }
                     }
                 }

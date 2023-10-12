@@ -1,0 +1,1 @@
+{{#set:Display precision of=2}}

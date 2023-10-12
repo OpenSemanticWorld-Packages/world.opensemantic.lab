@@ -1,0 +1,55 @@
+{
+    "main_unit": {
+        "uuid": "0000bddc-4dd3-4364-bda0-4a73c9cbd6c6",
+        "name": "$/kg",
+        "main_symbol": "$/kg",
+        "alternative_symbols": [],
+        "use_as_input_unit": true,
+        "use_as_display_unit": true,
+        "ontology_iri": []
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "0.95",
+            "uuid": "93e4014d-a51f-409c-9c98-7be12b48afb2",
+            "name": "\u20ac/kg",
+            "main_symbol": "\u20ac/kg",
+            "alternative_symbols": [],
+            "use_as_input_unit": true,
+            "use_as_display_unit": true,
+            "ontology_iri": []
+        }
+    ],
+    "type": [
+        "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
+    ],
+    "property_type": "Quantity",
+    "name": "HasGravimetricMonetaryValue",
+    "uuid": "2f83d74c-0cf5-45c8-993b-0d60da40243f",
+    "label": [
+        {
+            "text": "GravimetricMonetaryValue",
+            "lang": "en"
+        },
+        {
+            "text": "Gewichtsbezogener Geldwert",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Currency value per weight",
+            "lang": "en"
+        },
+        {
+            "text": "Geldwert pro Gewicht",
+            "lang": "en"
+        }
+    ],
+    "proportional_to": [
+        "Property:HasMonetaryValue"
+    ],
+    "inverse_proportional_to": [
+        "Property:HasMass"
+    ]
+}

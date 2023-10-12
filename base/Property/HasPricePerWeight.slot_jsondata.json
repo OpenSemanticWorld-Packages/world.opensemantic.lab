@@ -1,0 +1,33 @@
+{
+    "subproperty_of": "Property:HasGravimetricMonetaryValue",
+    "base_property": "Property:HasGravimetricMonetaryValue",
+    "type": [
+        "Category:OSW69f251a900944602a08d1cca830249b5"
+    ],
+    "property_type": "Quantity",
+    "name": "HasPricePerWeight",
+    "ontology_iri": [
+        "https://gpo.ontology.link/GPO_19430518_1a88_4ad0_916a_c903fe807520"
+    ],
+    "uuid": "c3ade8dc-3f04-4477-8d18-be48fc75d2c3",
+    "label": [
+        {
+            "text": "PricePerWeight",
+            "lang": "en"
+        },
+        {
+            "text": "PreisProGewicht",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Price per weight, e. g. kilo-price",
+            "lang": "en"
+        },
+        {
+            "text": "Preis pro Gewicht, z. B. Kilopreis",
+            "lang": "de"
+        }
+    ]
+}
