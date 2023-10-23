@@ -1,0 +1,20 @@
+{
+    "subclass_of": [
+        "Category:OSWe427aafafbac4262955b9f690a83405d"
+    ],
+    "uuid": "da27e2ff-f108-48eb-b728-ffb69c49a16d",
+    "name": "DataTool",
+    "label": [
+        {
+            "text": "Data tool",
+            "lang": "en"
+        },
+        {
+            "text": "Daten-Werkzeug",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        "Category:Category"
+    ]
+}

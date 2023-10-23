@@ -1,0 +1,13 @@
+<table class="info_box">
+<tr>
+<th class="heading" colspan="2">{{{_label_schema|Data Tool}}}</th>
+</tr>
+<tr>
+<th>{{#switch:{{USERLANGUAGECODE}}|en=Storage location (database)|de=Speicherort (Datenbank)}}</th>
+<td>{{{storage_location|}}}</td>
+</tr>
+<tr>
+<th>{{#switch:{{USERLANGUAGECODE}}|en=Data sources|de=Datenquellen}}</th>
+<td>{{{data_sources|}}}</td>
+</tr>
+</table>
