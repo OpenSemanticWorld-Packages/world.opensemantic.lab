@@ -12,6 +12,9 @@
             "label": "OSW Lab",
             "description": "For material science, etc.",
             "version": "0.3.1",
+            "requiredPackages": [
+                "world.opensemantic.base"
+            ],
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
                 {
