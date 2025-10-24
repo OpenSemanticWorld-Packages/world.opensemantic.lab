@@ -1,13 +1,20 @@
 {
+    "subclass_of": [
+        "Category:OSWfa0d5710bc0f45819b61b65fc4fd9656"
+    ],
     "type": [
         "Category:Category"
     ],
-    "subclass_of": [
-        "Category:OSWe5aa96bffb1c4d95be7fbd46142ad203"
-    ],
     "uuid": "0e7fab22-62fb-4427-ad0f-a454bc868a0d",
-    "name": "ElnEntry",
     "label": [
+        {
+            "text": "Laboratory process",
+            "lang": "en"
+        },
+        {
+            "text": "Laborprozess",
+            "lang": "de"
+        },
         {
             "text": "ELN Entry",
             "lang": "en"
@@ -23,11 +30,15 @@
             "lang": "en"
         },
         {
-            "text": "Enth\u00e4lt Notizen und Daten \u00fcber Experimente",
+            "text": "Enthält Notizen und Daten über Experimente",
             "lang": "de"
         }
     ],
+    "name": "LaboratoryProcess",
     "utf8_icon": [
-        "\ud83d\udcd3"
+        "📓"
+    ],
+    "metaclass": [
+        "Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6"
     ]
 }

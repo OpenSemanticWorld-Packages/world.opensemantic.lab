@@ -1,0 +1,102 @@
+{
+    "@context": [
+        "/wiki/Category:OSW0b6e695c4bb74e9ea5aa7f5da3150653?action=raw&slot=jsonschema",
+        {
+            "collection_default": {
+                "@id": "Property:HasCollection"
+            },
+            "keywords_default": {
+                "@id": "Property:HasKeyword"
+            },
+            "project_default": {
+                "@id": "Property:HasProject",
+                "@type": "@id"
+            },
+            "project_default*": {
+                "@id": "Property:BelongsTo",
+                "@type": "@id"
+            }
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW0b6e695c4bb74e9ea5aa7f5da3150653?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "61d19dea-4b9c-4de8-bcbd-e8036fc0e0a6",
+    "title": "LaboratoryProcessType",
+    "title*": {
+        "en": "Lab Process Type",
+        "de": "Laborprozess-Typ"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6"
+            ]
+        },
+        "collection_default": {
+            "type": "boolean",
+            "format": "checkbox",
+            "title": "Experiment Collection (default)",
+            "title*": {
+                "de": "Experiment/Versuchsreihe (Standardwert)"
+            },
+            "description": "This is a collection of ELN entries",
+            "description*": {
+                "de": "Stellt eine Sammlung von Laborbucheinträgen dar."
+            }
+        },
+        "display_id_default": {
+            "type": "boolean",
+            "format": "checkbox",
+            "title": "Include ID in name (default)",
+            "title*": {
+                "de": "ID im Namen anzeigen (Standardwert)"
+            },
+            "description": "Show ID after the name. If there is no name, the ID is always displayed.",
+            "description*": {
+                "de": "ID hinter dem Namen einblenden. Falls kein Name vorhanden ist wird immer die ID angezeigt."
+            }
+        },
+        "project_default": {
+            "type": "string",
+            "format": "autocomplete",
+            "title": "Project (default)",
+            "title*": {
+                "de": "Projekt (Standardwert)"
+            },
+            "description": "Assigned project. The access rights are also taken from this project",
+            "description*": {
+                "de": "Zugeordnetes Projekt. Von diesem werden auch die Zugriffsrechte übernommen"
+            },
+            "range": "Category:OSWb2d7e6a2eff94c82b7f1f2699d5b0ee3"
+        },
+        "keywords_default": {
+            "title": "Keywords (default)",
+            "title*": {
+                "de": "Schlagwörter (Standardwert)"
+            },
+            "description": "",
+            "description*": {
+                "de": ""
+            },
+            "type": "array",
+            "items": {
+                "title": "Keyword",
+                "title*": {
+                    "de": "Schlagwort"
+                },
+                "type": "string",
+                "format": "autocomplete",
+                "range": "Category:OSW09f6cdd54bc54de786eafced5f675cbe"
+            }
+        }
+    }
+}

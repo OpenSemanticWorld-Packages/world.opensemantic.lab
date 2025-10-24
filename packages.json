@@ -98,8 +98,31 @@
                     }
                 },
                 {
+                    "name": "OSW61d19dea4b9c4de8bcbde8036fc0e0a6",
+                    "label": "LaboratoryProcessType",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_jsonschema.json"
+                        },
+                        "schema_template": {
+                            "urlPath": "Category/OSW61d19dea4b9c4de8bcbde8036fc0e0a6.slot_schema_template.text"
+                        }
+                    }
+                },
+                {
                     "name": "OSW0e7fab2262fb4427ad0fa454bc868a0d",
-                    "label": "ElnEntry",
+                    "label": "LaboratoryProcess",
                     "namespace": "NS_CATEGORY",
                     "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_main.wikitext",
                     "slots": {

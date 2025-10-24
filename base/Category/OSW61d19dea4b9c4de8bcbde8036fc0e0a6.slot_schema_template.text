@@ -1,0 +1,28 @@
+{ 
+    "title": "{{{name}}}",
+    "required": ["uuid"],
+    "properties": { 
+        "uuid": {
+            "type": "string",
+            "format": "uuid",
+            "options": {
+                "hidden": true
+            }
+        } {{#if collection_default}},
+        "collection": {
+            "default": "{{{collection_default}}}"
+        } {{/if}} {{#if display_id_default}},
+        "display_id": {
+            "default": "{{{display_id_default}}}"
+        } {{/if}} {{#if project_default}},
+        "project": {
+            "default": "{{{project_default}}}"
+        } {{/if}} {{#if keywords_default}},
+        "keywords": {
+            "default": [
+                {{#each keywords_default}}"{{{.}}}"{{#unless @last}},
+                {{/unless}}{{/each}}
+            ]
+        } {{/if}} 
+    } 
+}

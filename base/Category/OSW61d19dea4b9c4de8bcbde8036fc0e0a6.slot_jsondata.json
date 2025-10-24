@@ -1,0 +1,29 @@
+{
+    "subclass_of": [
+        "Category:OSW0b6e695c4bb74e9ea5aa7f5da3150653"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "61d19dea-4b9c-4de8-bcbd-e8036fc0e0a6",
+    "label": [
+        {
+            "text": "Laboratory Process Type",
+            "lang": "en"
+        },
+        {
+            "text": "ELN Entry Type",
+            "lang": "en"
+        },
+        {
+            "text": "Laborprozess-Typ",
+            "lang": "de"
+        },
+        {
+            "text": "MetaLaborprozessKategorie",
+            "lang": "de"
+        }
+    ],
+    "name": "LaboratoryProcessType",
+    "metaclass": []
+}
