@@ -11,7 +11,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "requiredPackages": [
                 "world.opensemantic.base"
             ],
@@ -114,29 +114,6 @@
                         },
                         "jsonschema": {
                             "urlPath": "Category/OSW0e7fab2262fb4427ad0fa454bc868a0d.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
-                    "name": "OSWda27e2fff10848ebb728ffb69c49a16d",
-                    "label": "DataTool",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_header.wikitext"
-                        },
-                        "header_template": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_header_template.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_jsonschema.json"
                         }
                     }
                 },
