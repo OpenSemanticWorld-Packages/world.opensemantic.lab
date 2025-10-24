@@ -1,8 +1,8 @@
 {
     "main_unit": {
         "uuid": "b10f2e1c-cd56-485a-8d78-87ff12bc3881",
-        "name": "kg/m\u00b3",
-        "main_symbol": "kg/m\u00b3",
+        "name": "kg/m³",
+        "main_symbol": "kg/m³",
         "alternative_symbols": [
             "kg/m^3",
             "kgm^-3"

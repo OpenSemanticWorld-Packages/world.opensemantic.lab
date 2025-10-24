@@ -12,8 +12,8 @@
         {
             "conversion_factor_to_main_unit": "0.95",
             "uuid": "93e4014d-a51f-409c-9c98-7be12b48afb2",
-            "name": "\u20ac/kg",
-            "main_symbol": "\u20ac/kg",
+            "name": "€/kg",
+            "main_symbol": "€/kg",
             "alternative_symbols": [],
             "use_as_input_unit": true,
             "use_as_display_unit": true,

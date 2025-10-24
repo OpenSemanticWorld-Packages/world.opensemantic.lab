@@ -24,7 +24,7 @@
             "p",
             "pieces",
             "St",
-            "St\u00fcck"
+            "Stück"
         ],
         "use_as_input_unit": true,
         "use_as_display_unit": true,
@@ -41,7 +41,7 @@
             "lang": "en"
         },
         {
-            "text": "Die Menge eines abzahlbaren Gutes (St\u00fcckgut) in St\u00fcck (St)",
+            "text": "Die Menge eines abzahlbaren Gutes (Stückgut) in Stück (St)",
             "lang": "de"
         }
     ]

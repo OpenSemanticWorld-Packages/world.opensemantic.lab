@@ -1,27 +1,9 @@
 {
-    "main_unit": {
-        "uuid": "ea4bb7e8-74f4-4a16-a281-a4ddd50e17c4",
-        "name": "kg",
-        "main_symbol": "kg",
-        "alternative_symbols": [
-            "kilogram",
-            "kilograms",
-            "Kilogram"
-        ],
-        "use_as_input_unit": false,
-        "use_as_display_unit": false,
-        "ontology_iri": [
-            "http://qudt.org/vocab/unit/KiloGM"
-        ]
-    },
-    "property_type": "Quantity",
-    "name": "HasMass",
-    "ontology_iri": [
-        "http://qudt.org/vocab/quantitykind/Mass"
-    ],
     "type": [
         "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
     ],
+    "name": "HasMass",
+    "property_type": "Quantity",
     "uuid": "d78dc121-87c1-4f54-ba6f-2b7626ee6088",
     "label": [
         {
@@ -39,12 +21,33 @@
             "lang": "en"
         }
     ],
+    "main_unit": {
+        "uuid": "ea4bb7e8-74f4-4a16-a281-a4ddd50e17c4",
+        "name": "kg",
+        "main_symbol": "kg",
+        "alternative_symbols": [
+            "kilogram",
+            "kilograms",
+            "Kilogram"
+        ],
+        "use_as_input_unit": false,
+        "use_as_display_unit": false,
+        "ontology_iri": [
+            "http://qudt.org/vocab/unit/KiloGM"
+        ],
+        "codes": [
+            "KGM"
+        ]
+    },
+    "ontology_iri": [
+        "http://qudt.org/vocab/quantitykind/Mass"
+    ],
     "additional_units": [
         {
-            "conversion_factor_to_main_unit": "1000",
             "uuid": "2b1a3a39-eceb-4249-b868-97def91134dc",
             "name": "g",
             "main_symbol": "g",
+            "conversion_factor_to_main_unit": "1000",
             "alternative_symbols": [
                 "gram",
                 "grams",
@@ -54,13 +57,16 @@
             "use_as_display_unit": false,
             "ontology_iri": [
                 "http://qudt.org/vocab/unit/GM"
+            ],
+            "codes": [
+                "GRM"
             ]
         },
         {
-            "conversion_factor_to_main_unit": "1000000",
             "uuid": "8840c06a-1f5e-4242-904d-d3e714fe22d6",
             "name": "mg",
             "main_symbol": "mg",
+            "conversion_factor_to_main_unit": "1000000",
             "alternative_symbols": [
                 "milligram",
                 "milligrams",
@@ -70,13 +76,16 @@
             "use_as_display_unit": false,
             "ontology_iri": [
                 "http://qudt.org/vocab/unit/MilliGM"
+            ],
+            "codes": [
+                "MGM"
             ]
         },
         {
-            "conversion_factor_to_main_unit": "0.001",
             "uuid": "0fe26777-caa4-4eb3-8145-dbc6a79855bd",
             "name": "t",
             "main_symbol": "t",
+            "conversion_factor_to_main_unit": "0.001",
             "alternative_symbols": [
                 "ton",
                 "tons"
@@ -85,6 +94,9 @@
             "use_as_display_unit": false,
             "ontology_iri": [
                 "http://qudt.org/vocab/unit/TONNE"
+            ],
+            "codes": [
+                "TNE"
             ]
         }
     ]

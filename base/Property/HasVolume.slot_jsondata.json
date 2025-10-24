@@ -2,8 +2,56 @@
     "type": [
         "Category:OSW1b15ddcf042c4599bd9d431cbfdf3430"
     ],
-    "property_type": "Quantity",
+    "main_unit": {
+        "uuid": "6f555605-025f-4c85-bc44-495e839148de",
+        "name": "m³",
+        "main_symbol": "m³",
+        "alternative_symbols": [
+            "m3",
+            "m^3"
+        ],
+        "use_as_input_unit": true,
+        "use_as_display_unit": true,
+        "ontology_iri": [
+            "http://qudt.org/vocab/unit/KiloL",
+            "http://qudt.org/vocab/unit/M3",
+            "http://qudt.org/vocab/unit/STR"
+        ],
+        "codes": [
+            "MTQ"
+        ]
+    },
+    "additional_units": [
+        {
+            "conversion_factor_to_main_unit": "1000",
+            "uuid": "059d9ec5-5a59-447f-92b4-d01fcefaec5a",
+            "name": "l",
+            "main_symbol": "l",
+            "alternative_symbols": [
+                "dm³",
+                "dm3",
+                "dm^3",
+                "L"
+            ],
+            "use_as_input_unit": true,
+            "use_as_display_unit": true,
+            "ontology_iri": [
+                "http://qudt.org/vocab/unit/L",
+                "http://qudt.org/vocab/unit/DeciM3"
+            ],
+            "codes": [
+                "LTR"
+            ]
+        },
+        {
+            "conversion_factor_to_main_unit": "1000000",
+            "uuid": "b8cc22b1-cbd4-4577-b1fa-48c440de7147",
+            "name": "ml",
+            "main_symbol": "ml"
+        }
+    ],
     "name": "HasVolume",
+    "property_type": "Quantity",
     "uuid": "32057990-d670-4f17-b504-261c1a9f5b58",
     "label": [
         {
@@ -25,41 +73,5 @@
         "http://qudt.org/vocab/quantitykind/Volume",
         "http://www.wikidata.org/entity/Q39297",
         "http://dbpedia.org/resource/Volume"
-    ],
-    "main_unit": {
-        "uuid": "6f555605-025f-4c85-bc44-495e839148de",
-        "name": "m\u00b3",
-        "main_symbol": "m\u00b3",
-        "alternative_symbols": [
-            "m3",
-            "m^3"
-        ],
-        "use_as_input_unit": true,
-        "use_as_display_unit": true,
-        "ontology_iri": [
-            "http://qudt.org/vocab/unit/KiloL",
-            "http://qudt.org/vocab/unit/M3",
-            "http://qudt.org/vocab/unit/STR"
-        ]
-    },
-    "additional_units": [
-        {
-            "conversion_factor_to_main_unit": "1000",
-            "uuid": "059d9ec5-5a59-447f-92b4-d01fcefaec5a",
-            "name": "l",
-            "main_symbol": "l",
-            "alternative_symbols": [
-                "dm\u00b3",
-                "dm3",
-                "dm^3",
-                "L"
-            ],
-            "use_as_input_unit": true,
-            "use_as_display_unit": true,
-            "ontology_iri": [
-                "http://qudt.org/vocab/unit/L",
-                "http://qudt.org/vocab/unit/DeciM3"
-            ]
-        }
     ]
 }

@@ -14,10 +14,10 @@
         {
             "conversion_factor_to_main_unit": "0.95",
             "uuid": "7c30047d-d84a-4e75-8452-07bc1204ffab",
-            "name": "\u20ac/l",
-            "main_symbol": "\u20ac/l",
+            "name": "€/l",
+            "main_symbol": "€/l",
             "alternative_symbols": [
-                "\u20ac/L"
+                "€/L"
             ],
             "use_as_input_unit": false,
             "use_as_display_unit": false,
