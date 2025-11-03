@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "/wiki/Category:OSWe0572f2791844010962886b892970b4d?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWe0572f2791844010962886b892970b4d?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "b3b9ec5c-b50d-401c-9b99-6ce3009b5c54",
+    "title": "EnvironmentalTestChamber",
+    "title*": {
+        "en": "Environmental test chamber",
+        "de": "Umwelttestkammer"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWb3b9ec5cb50d401c9b996ce3009b5c54"
+            ]
+        }
+    }
+}

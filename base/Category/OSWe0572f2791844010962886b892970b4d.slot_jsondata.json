@@ -1,0 +1,20 @@
+{
+    "type": [
+        "Category:OSWd845b96813a344458f140e48c4d063fd"
+    ],
+    "subclass_of": [
+        "Category:OSWf0fe562f422d49c6877490b3dfee2f3f"
+    ],
+    "uuid": "e0572f27-9184-4010-9628-86b892970b4d",
+    "label": [
+        {
+            "text": "Controlled environment",
+            "lang": "en"
+        },
+        {
+            "text": "Kontrollierte Umgebung",
+            "lang": "de"
+        }
+    ],
+    "name": "ControlledEnvironment"
+}

@@ -1,0 +1,22 @@
+{
+    "subclass_of": [
+        "Category:OSWca99a9bb9ad24386b222d18a73c2af5e"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "182916df-3eee-472e-88e7-c8d114a7fe27",
+    "label": [
+        {
+            "text": "Material Type",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "text": "Helps to create Material subcategories",
+            "lang": "en"
+        }
+    ],
+    "name": "MaterialType"
+}

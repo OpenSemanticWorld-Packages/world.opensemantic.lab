@@ -1,0 +1,275 @@
+{
+    "@context": [
+        {
+            "device_under_test": {
+                "@id": "Property:HasDut",
+                "@type": "@id"
+            },
+            "test_procedure": {
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "test_procedure_instance_property": "Property:HasProperty",
+                    "test_procedure_instance": "Property:HasObject",
+                    "test_procedure_instance*": {
+                        "@id": "Property:HasProcedure",
+                        "@type": "@id"
+                    },
+                    "test_procedure_subcategory": {
+                        "@id": "Property:HasProcedureType",
+                        "@type": "@id"
+                    }
+                }
+            },
+            "test_procedure_name": {
+                "@id": "Property:HasProcedure",
+                "@type": "xsd:string"
+            },
+            "tester": {
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "tester_instance_property": "Property:HasProperty",
+                    "tester_instance": "Property:HasObject",
+                    "tester_instance*": {
+                        "@id": "Property:HasTool",
+                        "@type": "@id"
+                    },
+                    "tester_name": "Property:HasObject",
+                    "tester_name*": {
+                        "@id": "Property:HasTool",
+                        "@type": "xsd:string"
+                    },
+                    "tester_channel": {
+                        "@id": "Property:HasChannel",
+                        "@type": "xsd:string"
+                    }
+                }
+            }
+        },
+        "/wiki/Category:OSW0e7fab2262fb4427ad0fa454bc868a0d?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW0e7fab2262fb4427ad0fa454bc868a0d?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "fa914762-adaa-4665-a63b-6a77c3ea6eed",
+    "title": "AnalyticalLaboratoryProcess",
+    "title*": {
+        "en": "Analytical Laboratory Process",
+        "de": "Analytischer Laborprozess"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "device_under_test",
+        "tester",
+        "test_procedure",
+        "test_procedure_name"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWfa914762adaa4665a63b6a77c3ea6eed"
+            ]
+        },
+        "device_under_test": {
+            "title": "Device(s) under test (DUT)",
+            "title*": {
+                "de": "Testobjekt(e) (DUT)"
+            },
+            "description": "Tested device(s)",
+            "description*": {
+                "de": "Getestete(s) Objekt(e)"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "DUT",
+                "title*": {
+                    "de": "Testobjekt"
+                },
+                "type": "string",
+                "format": "autocomplete",
+                "range": "Category:OSW37a57741ae2e4dd4b29b1172b6848be8"
+            }
+        },
+        "tester": {
+            "title": "Test setup(s)",
+            "title*": {
+                "de": "Test-Setup(s)"
+            },
+            "description": "Device(s) and channel(s) used to perform the test",
+            "description*": {
+                "de": "Gerät(e) und Kanal, mit dem der Test durchgeführt wurde/wird"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "type": "object",
+                "required": [
+                    "uuid",
+                    "tester_instance",
+                    "tester_instance_property"
+                ],
+                "defaultPropertiers": [
+                    "tester_instance",
+                    "tester_name",
+                    "tester_channel"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "tester_instance": {
+                        "title": "Tester",
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSWf0fe562f422d49c6877490b3dfee2f3f"
+                    },
+                    "tester_instance_property": {
+                        "type": "string",
+                        "default": "Property:HasTool",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "tester_name": {
+                        "title": "Tester (name, alternatively)",
+                        "title*": {
+                            "de": "Tester (Name, alternativ)"
+                        },
+                        "description": "Use only if tester can't be referenced.",
+                        "description*": {
+                            "de": "Nur verwenden, wenn der Tesrer nicht referenziert werden kann."
+                        },
+                        "type": "string"
+                    },
+                    "tester_channel": {
+                        "title": "Channel(s)",
+                        "title*": {
+                            "de": "Kanal/Kanäle"
+                        },
+                        "description": "Channel(s) used to perform the test",
+                        "description*": {
+                            "de": "Kanal/Kanäle, mit dem der Test durchgeführt wurde/wird"
+                        },
+                        "type": "array",
+                        "format": "table",
+                        "items": {
+                            "title": "Channel",
+                            "title*": {
+                                "de": "Kanal"
+                            },
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "test_procedure": {
+            "title": "Test procedure(s)",
+            "title*": {
+                "de": "Testprozedur(en)"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "Procedure",
+                "title*": {
+                    "de": "Prozedur"
+                },
+                "type": "object",
+                "$comment": "We need an anchor-id for 'watch', since we are not on the root level of the object.",
+                "id": "test_procedure",
+                "defaultProperties": [
+                    "test_procedure_subcategory",
+                    "test_procedure_instance"
+                ],
+                "required": [
+                    "uuid",
+                    "test_procedure_instance_property"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "test_procedure_subcategory": {
+                        "title": "Subcategory",
+                        "description": "Select Subcategory first to get more precise results.",
+                        "description*": {
+                            "de": "Wählen Sie zuerst die Unterkategorie, um genauere Ergebnisse zu erhalten."
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:Category",
+                        "subclassof_range": "Category:OSWe2d16d21532a40cfa0abe577629d5c37"
+                    },
+                    "test_procedure_instance": {
+                        "title": "Instance",
+                        "description": "Select or create an appropiate test procedure.",
+                        "description*": {
+                            "de": "Wählen oder erstellen Sie ein geeignetes Prüfverfahren."
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "$comment": "Here we use the anchor-id for 'watch' as prefix",
+                        "watch": {
+                            "subcategory_select": "test_procedure.test_procedure_subcategory"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "query": "[[$(subcategory_select)]]"
+                            }
+                        }
+                    },
+                    "test_procedure_instance_property": {
+                        "type": "string",
+                        "default": "Property:HasProcedure",
+                        "options": {
+                            "hidden": true
+                        }
+                    }
+                },
+                "eval_template": [
+                    {
+                        "type": "wikitext",
+                        "mode": "render",
+                        "value": "{{#if: {{{test_procedure_instance}}} |  [[{{{test_procedure_instance}}}]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: [[:{{{test_procedure_subcategory}}}]]) | [[:{{{test_procedure_subcategory}}}]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}})}}"
+                    }
+                ]
+            }
+        },
+        "test_procedure_name": {
+            "title": "Test procedure(s) (name)",
+            "title*": {
+                "de": "Testprozedur(en) (Name)"
+            },
+            "description": "Should only be used if the testprocedure can't be referenced!",
+            "description*": {
+                "de": "Sollte nur verwendet werden, wenn die Testprozedur nicht referenziert werden kann!"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "Test procedure",
+                "title*": {
+                    "de": "Testprozedur"
+                },
+                "type": "string"
+            },
+            "uniqueItems": true
+        }
+    }
+}

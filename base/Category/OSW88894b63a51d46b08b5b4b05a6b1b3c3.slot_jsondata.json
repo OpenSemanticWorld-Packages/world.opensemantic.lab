@@ -3,17 +3,17 @@
         "Category:Category"
     ],
     "subclass_of": [
-        "Category:OSW31ca9a739cb24079b36824045c0832aa"
+        "Category:OSW37a57741ae2e4dd4b29b1172b6848be8"
     ],
     "uuid": "88894b63-a51d-46b0-8b5b-4b05a6b1b3c3",
-    "name": "Sample",
+    "name": "MaterialSample",
     "label": [
         {
-            "text": "Sample",
+            "text": "Material Sample",
             "lang": "en"
         },
         {
-            "text": "Probe",
+            "text": "Materialprobe",
             "lang": "de"
         }
     ],

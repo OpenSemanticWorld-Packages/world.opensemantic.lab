@@ -1,0 +1,22 @@
+{
+    "subclass_of": [
+        "Category:OSW182916df3eee472e88e7c8d114a7fe27"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "2afce49f-e800-460a-95cf-480cc0656757",
+    "label": [
+        {
+            "text": "Chemical Substance Type",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "text": "Helps to create subcategories of Chemical Substance",
+            "lang": "en"
+        }
+    ],
+    "name": "ChemicalSubstanceType"
+}

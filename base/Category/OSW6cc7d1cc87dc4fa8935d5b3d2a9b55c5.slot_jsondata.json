@@ -1,0 +1,20 @@
+{
+    "subclass_of": [
+        "Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "6cc7d1cc-87dc-4fa8-935d-5b3d2a9b55c5",
+    "label": [
+        {
+            "text": "Analytical Laboratory Process Type",
+            "lang": "en"
+        },
+        {
+            "text": "Analytischer Laborprozess-Typ",
+            "lang": "de"
+        }
+    ],
+    "name": "AnalyticalLabProcessType"
+}

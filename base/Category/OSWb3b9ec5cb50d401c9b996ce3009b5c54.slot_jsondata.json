@@ -1,0 +1,20 @@
+{
+    "type": [
+        "Category:OSWd845b96813a344458f140e48c4d063fd"
+    ],
+    "subclass_of": [
+        "Category:OSWe0572f2791844010962886b892970b4d"
+    ],
+    "uuid": "b3b9ec5c-b50d-401c-9b99-6ce3009b5c54",
+    "label": [
+        {
+            "text": "Environmental test chamber",
+            "lang": "en"
+        },
+        {
+            "text": "Umwelttestkammer",
+            "lang": "de"
+        }
+    ],
+    "name": "EnvironmentalTestChamber"
+}

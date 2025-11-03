@@ -1,0 +1,70 @@
+{ 
+    "title": "{{{name}}}",
+    "required": ["uuid"],
+    "properties": { 
+        "uuid": {
+            "type": "string",
+            "format": "uuid",
+            "options": {
+                "hidden": true
+            }
+        } {{#if device_under_test}},
+        "device_under_test": {
+            "items": {
+                "options": {
+                    "autocomplete": {
+                        "query": "{{#each device_under_test}}[[:{{{device_under_test}}}{{{dut_type}}}]]OR[[{{{device_under_test}}}{{{dut_type}}}]]{{#unless @last}} OR {{/unless}}{{/each}}"            
+                    }
+                }
+            },
+            "default": [           
+                {{#each device_under_test}}"{{{device_under_test}}}{{{dut_default}}}"{{#unless @last}},
+                {{/unless}}{{/each}}
+            ]
+        } {{/if}} {{#if tester}},
+        "tester": {
+            "items": {
+            	"properties": {
+                	"tester_instance": {
+                    	"options": {
+                    		"autocomplete": {
+                        		"query": "{{#each tester}}[[:{{{tester}}}{{{tester_type}}}]]OR[[{{{tester}}}{{{tester_type}}}]]{{#unless @last}} OR {{/unless}}{{/each}}"            
+                    		}
+                		}
+                    }
+                }
+                
+            },
+            "default": [
+            	{{#each tester}}{
+                	"tester_instance": "{{{tester}}}{{{tester_default}}}"{{#if tester_channel_default}},
+                    "tester_channel": [
+                    	{{#each tester_channel_default}}"{{{tester}}}{{{tester_channel_default}}}{{{.}}}"{{#unless @last}},
+                		{{/unless}}{{/each}}                    
+                    ]{{/if}}
+            	}{{#unless @last}},
+                {{/unless}}{{/each}}
+            ]
+        } {{/if}} {{#if test_procedure}},
+        "test_procedure": {
+            "items": {
+            	"properties": {
+                	"test_procedure_subcategory": {
+                    	"options": {
+                    		"autocomplete": {
+                        		"query": "{{#each test_procedure}}[[:{{{test_procedure}}}{{{procedure_type}}}]]OR[[{{{test_procedure}}}{{{procedure_type}}}]]{{#unless @last}} OR {{/unless}}{{/each}}"            
+                    		}
+                		}
+                    }
+                }                
+            },
+            "default": [
+                {{#each test_procedure}}{
+                	"test_procedure_subcategory": "{{{test_procedure}}}{{{procedure_type}}}"{{#if procedure_default}},
+                    "test_procedure_instance": "{{{test_procedure}}}{{{procedure_default}}}"{{/if}}
+                }{{#unless @last}},
+                {{/unless}}{{/each}}                
+            ]
+        } {{/if}}
+    } 
+}

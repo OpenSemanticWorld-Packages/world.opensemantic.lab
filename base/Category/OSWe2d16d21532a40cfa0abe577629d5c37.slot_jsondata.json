@@ -1,0 +1,30 @@
+{
+    "subclass_of": [
+        "Category:OSWe21775c8dd604739885dfc24c32cc548"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "e2d16d21-532a-40cf-a0ab-e577629d5c37",
+    "label": [
+        {
+            "text": "Test procedure",
+            "lang": "en"
+        },
+        {
+            "text": "Testprozedure",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "A combination of several instructions or command to test something, e.g. a device for a certain capability",
+            "lang": "en"
+        },
+        {
+            "text": "Eine Kombination aus mehreren Anweisungen oder Befehlen, um etwas zu testen, z. B. ein Gerät auf eine bestimmte Fähigkeit",
+            "lang": "de"
+        }
+    ],
+    "name": "TestProcedure"
+}

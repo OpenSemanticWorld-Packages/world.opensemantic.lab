@@ -1,0 +1,32 @@
+{
+    "@context": [
+        "/wiki/Category:OSWe21775c8dd604739885dfc24c32cc548?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWe21775c8dd604739885dfc24c32cc548?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "e2d16d21-532a-40cf-a0ab-e577629d5c37",
+    "title": "TestProcedure",
+    "title*": {
+        "en": "Test procedure",
+        "de": "Testprozedure"
+    },
+    "description": "A combination of several instructions or command to test something, e.g. a device for a certain capability",
+    "description*": {
+        "en": "A combination of several instructions or command to test something, e.g. a device for a certain capability",
+        "de": "Eine Kombination aus mehreren Anweisungen oder Befehlen, um etwas zu testen, z. B. ein Gerät auf eine bestimmte Fähigkeit"
+    },
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWe2d16d21532a40cfa0abe577629d5c37"
+            ]
+        }
+    }
+}

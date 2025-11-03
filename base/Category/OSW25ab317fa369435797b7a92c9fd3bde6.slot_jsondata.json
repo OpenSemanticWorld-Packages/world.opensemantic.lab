@@ -1,0 +1,30 @@
+{
+    "type": [
+        "Category:Category"
+    ],
+    "subclass_of": [
+        "Category:OSW182916df3eee472e88e7c8d114a7fe27"
+    ],
+    "uuid": "25ab317f-a369-4357-97b7-a92c9fd3bde6",
+    "label": [
+        {
+            "text": "Sample type",
+            "lang": "en"
+        },
+        {
+            "text": "Probentyp",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Type of a sample, e.g., the type number specified by the manufacturer",
+            "lang": "en"
+        },
+        {
+            "text": "Typ einer Probe, z.B. die Typennummer wie vom Hersteller angegeben",
+            "lang": "de"
+        }
+    ],
+    "name": "SampleType"
+}

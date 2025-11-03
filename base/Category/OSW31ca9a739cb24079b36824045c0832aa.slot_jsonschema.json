@@ -1,10 +1,10 @@
 {
     "@context": [
-        "/wiki/Category:Item?action=raw&slot=jsonschema"
+        "/wiki/Category:OSW37a57741ae2e4dd4b29b1172b6848be8?action=raw&slot=jsonschema"
     ],
     "allOf": [
         {
-            "$ref": "/wiki/Category:Item?action=raw&slot=jsonschema"
+            "$ref": "/wiki/Category:OSW37a57741ae2e4dd4b29b1172b6848be8?action=raw&slot=jsonschema"
         }
     ],
     "type": "object",
@@ -17,7 +17,7 @@
     "description": "Contains chemical substances and engineered matterials / parts",
     "description*": {
         "en": "Contains chemical substances and engineered matterials / parts",
-        "de": "Enth\u00e4lt chemische Stoffe, Materialien und Bauteile"
+        "de": "Enthält chemische Stoffe, Materialien und Bauteile"
     },
     "required": [
         "type"

@@ -1,0 +1,40 @@
+{
+    "type": [
+        "Category:OSWc11438cd6c814ed1a5a253555ee351b4"
+    ],
+    "subclass_of": [
+        "Category:OSW0e7fab2262fb4427ad0fa454bc868a0d"
+    ],
+    "uuid": "5c6f6eaa-a96e-4f84-ad6f-2ea02fc18ce4",
+    "label": [
+        {
+            "text": "Sampling",
+            "lang": "en"
+        },
+        {
+            "text": "Probennahme",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Process of taking a sample, e.g., filling a container from a reservoir (river, lake, larger container)",
+            "lang": "en"
+        },
+        {
+            "text": "Der Prozess der Probennahme, z.B. das Befüllen eines Behälters aus einem Reservoir (Fluss, See, größerer Behälter)",
+            "lang": "de"
+        }
+    ],
+    "name": "Sampling",
+    "utf8_icon": [
+        "🥼"
+    ],
+    "output": [
+        {
+            "uuid": "5cd77ae0-f4c8-4dee-841f-f0cb2c521813",
+            "output_type": "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3",
+            "output_default": ""
+        }
+    ]
+}

@@ -18,10 +18,6 @@
         {
             "text": "Laborprozess-Typ",
             "lang": "de"
-        },
-        {
-            "text": "MetaLaborprozessKategorie",
-            "lang": "de"
         }
     ],
     "name": "LaboratoryProcessType",

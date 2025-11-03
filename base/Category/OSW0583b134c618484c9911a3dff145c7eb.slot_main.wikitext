@@ -1,6 +1,31 @@
-== Created Instances ==
+== {{#switch:{{USERLANGUAGECODE}}|#default=Chemical substances(Subcategories)|de=Chemische Substanzen(Sukategorien)}} ==
+
+{{#ask: [[HasType::Category:OSW2afce49fe800460a95cf480cc0656757]]
+    |mainlabel={{#switch:{{USERLANGUAGECODE}}|#default=Chemical substance|de=Chemische Substanz}}
+    |?HasDescription=Description|+lang={{USERLANGUAGECODE}}
+    |?HasMolecularWeight={{#switch:{{USERLANGUAGECODE}}|#default=Molecular weight|de=Molekulargewicht}}
+    |?HasIupacName={{#switch:{{USERLANGUAGECODE}}|#default=IUPAC name|de=IUPAC-Name}}
+    |?HasPubchemCid=PubChem CID
+    |?HasPubchemSid=PubChem SID
+    |?HasCasNumber=CAS No
+    |?HasInchiId=InChI
+    |?HasSmilesNotation={{#switch:{{USERLANGUAGECODE}}|#default=SMILES notation|de=SMILES-Notation}}
+    |?HasSumFormula={{#switch:{{USERLANGUAGECODE}}|#default=Sum formula|de=Summenformel}}
+    |format=datatable
+    |datatables-searchPanes=true
+    |datatables-searchPanes.initCollapsed=true
+}}
+
+== {{#switch:{{USERLANGUAGECODE}}|#default=Instances|de=Instanzen}} ==
 
 {{#ask: [[{{FULLPAGENAME}}]]
-|?HasPubchemId=PubChem CID
-|format=datatable
+    |mainlabel={{#switch:{{USERLANGUAGECODE}}|#default=Chemical substance|de=Chemische Substanz}}
+    |?HasType={{#switch:{{USERLANGUAGECODE}}|#default=Type|de=Typ}}
+    |?HasDescription=Description|+lang={{USERLANGUAGECODE}}
+    |?HasSerialNumber={{#switch:{{USERLANGUAGECODE}}|#default=Serial/Batch No.|de=Serien-/Chargen-Nummer}}
+    |?-HasOutput={{#switch:{{USERLANGUAGECODE}}|#default=Output of (process)|de=Output von (Prozess)}}
+    |?-HasOutput.HasInput={{#switch:{{USERLANGUAGECODE}}|#default=Components|de=Komponenten}}
+    |format=datatable
+    |datatables-searchPanes=true
+    |datatables-searchPanes.initCollapsed=true
 }}

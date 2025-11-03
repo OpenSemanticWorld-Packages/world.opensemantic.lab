@@ -1,0 +1,21 @@
+{
+    "type": [
+        "Category:OSWc11438cd6c814ed1a5a253555ee351b4"
+    ],
+    "subclass_of": [
+        "Category:OSWe5aa96bffb1c4d95be7fbd46142ad203"
+    ],
+    "uuid": "29355236-8bcf-4a36-8168-2671f8d47d8f",
+    "label": [
+        {
+            "text": "Mixing process",
+            "lang": "en"
+        },
+        {
+            "text": "Mischprozess",
+            "lang": "de"
+        }
+    ],
+    "description": [],
+    "name": "MixingProcess"
+}

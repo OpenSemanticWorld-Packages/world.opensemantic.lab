@@ -1,9 +1,9 @@
 {
+    "subclass_of": [
+        "Category:OSW37a57741ae2e4dd4b29b1172b6848be8"
+    ],
     "type": [
         "Category:Category"
-    ],
-    "subclass_of": [
-        "Category:Item"
     ],
     "uuid": "31ca9a73-9cb2-4079-b368-24045c0832aa",
     "label": [
@@ -22,7 +22,7 @@
             "lang": "en"
         },
         {
-            "text": "Enth\u00e4lt chemische Stoffe, Materialien und Bauteile",
+            "text": "Enthält chemische Stoffe, Materialien und Bauteile",
             "lang": "de"
         }
     ],
@@ -31,5 +31,8 @@
         "⚛",
         "⚖"
     ],
-    "name": "Material"
+    "name": "Material",
+    "metaclass": [
+        "Category:OSW182916df3eee472e88e7c8d114a7fe27"
+    ]
 }

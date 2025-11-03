@@ -1,0 +1,24 @@
+{
+    "type": [
+        "Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6"
+    ],
+    "subclass_of": [
+        "Category:OSW0e7fab2262fb4427ad0fa454bc868a0d"
+    ],
+    "uuid": "fa914762-adaa-4665-a63b-6a77c3ea6eed",
+    "label": [
+        {
+            "text": "Analytical Laboratory Process",
+            "lang": "en"
+        },
+        {
+            "text": "Analytischer Laborprozess",
+            "lang": "de"
+        }
+    ],
+    "description": [],
+    "name": "AnalyticalLaboratoryProcess",
+    "metaclass": [
+        "Category:OSW6cc7d1cc87dc4fa8935d5b3d2a9b55c5"
+    ]
+}

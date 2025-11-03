@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "/wiki/Category:OSWe5aa96bffb1c4d95be7fbd46142ad203?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWe5aa96bffb1c4d95be7fbd46142ad203?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "29355236-8bcf-4a36-8168-2671f8d47d8f",
+    "title": "MixingProcess",
+    "title*": {
+        "en": "Mixing process",
+        "de": "Mischprozess"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW293552368bcf4a3681682671f8d47d8f"
+            ]
+        }
+    }
+}

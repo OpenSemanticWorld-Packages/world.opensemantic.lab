@@ -1,0 +1,325 @@
+{
+    "@context": [
+        {
+            "device_under_test": {
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "dut_type": {
+                        "@id": "Property:HasDutType",
+                        "@type": "@id"
+                    },
+                    "dut_default": {
+                        "@id": "Property:HasDut",
+                        "@type": "@id"
+                    }
+                }
+            },
+            "tester": {
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "tester_type": {
+                        "@id": "Property:HasToolType",
+                        "@type": "@id"
+                    },
+                    "tester_default": {
+                        "@id": "Property:HasTool",
+                        "@type": "@id"
+                    },
+                    "tester_channel_default": {
+                        "@id": "Property:HasChannel",
+                        "@type": "xsd:string"
+                    }
+                }
+            },
+            "test_procedure": {
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "procedure_type": {
+                        "@id": "Property:HasProcedureType",
+                        "@type": "@id"
+                    },
+                    "tester_default": {
+                        "@id": "Property:HasProcedure",
+                        "@type": "@id"
+                    }
+                }
+            }
+        },
+        "/wiki/Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "6cc7d1cc-87dc-4fa8-935d-5b3d2a9b55c5",
+    "title": "AnalyticalLaboratoryProcessType",
+    "title*": {
+        "en": "Analytical Laboratory Process Type",
+        "de": "Analytischer Laborprozess-Typ"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "device_under_test",
+        "tester",
+        "test_procedure"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW6cc7d1cc87dc4fa8935d5b3d2a9b55c5"
+            ]
+        },
+        "device_under_test": {
+            "title": "Device(s) under test (default)",
+            "title*": {
+                "de": "Testobjekt(e) (Standardwert)"
+            },
+            "description": "Tested device(s) (DUT)",
+            "description*": {
+                "de": "Getestete(s) Objekt(e) (DUT)"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "DUT",
+                "title*": {
+                    "de": "Testobjekt"
+                },
+                "type": "object",
+                "id": "dut_",
+                "required": [
+                    "uuid"
+                ],
+                "defaultProperties": [
+                    "dut_type",
+                    "dut_default"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "dut_type": {
+                        "title": "Type",
+                        "title*": {
+                            "de": "Typ"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "todo: we need an any-subcategory-of shortcut",
+                                "query": "[[:Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]OR[[SubClassOf::Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]OR[[SubClassOf.SubClassOf::Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]OR[[SubClassOf.SubClassOf.SubClassOf::Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]"
+                            }
+                        }
+                    },
+                    "dut_default": {
+                        "title": "Default",
+                        "title*": {
+                            "de": "Standardwert"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSW37a57741ae2e4dd4b29b1172b6848be8",
+                        "watch": {
+                            "dut_type_w": "dut_.dut_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "query": "[[$(dut_type_w)]]"
+                            }
+                        }
+                    }
+                },
+                "eval_template": [
+                    {
+                        "type": "wikitext",
+                        "mode": "render",
+                        "value": "{{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: [[:{{{dut_type}}}]] {{#if: {{{dut_default|}}} | ({{#switch:{{USERLANGUAGECODE}}|en=default|de=Default|#default=default}}: [[{{{dut_default}}}]]) | ({{#switch:{{USERLANGUAGECODE}}|en=no default|de=Kein Default|#default=no default}})}}"
+                    }
+                ]
+            }
+        },
+        "tester": {
+            "title": "Tester(s) (default)",
+            "title*": {
+                "de": "Tester (Standardwert)"
+            },
+            "description": "Device(s) used for testing",
+            "description*": {
+                "de": "Für den Test eingesetzte(s) Gerät(e)"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "Tester",
+                "title*": {
+                    "de": "Tester"
+                },
+                "type": "object",
+                "id": "tester_",
+                "required": [
+                    "uuid"
+                ],
+                "defaultProperties": [
+                    "tester_type",
+                    "tester_default",
+                    "tester_channel_default"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "tester_type": {
+                        "title": "Type",
+                        "title*": {
+                            "de": "Typ"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "todo: we need an any-subcategory-of shortcut",
+                                "query": "[[:Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]OR[[SubClassOf::Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]OR[[SubClassOf.SubClassOf::Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]OR[[SubClassOf.SubClassOf.SubClassOf::Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSWf0fe562f422d49c6877490b3dfee2f3f]]"
+                            }
+                        }
+                    },
+                    "tester_default": {
+                        "title": "Default",
+                        "title*": {
+                            "de": "Standardwert"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSWf0fe562f422d49c6877490b3dfee2f3f",
+                        "watch": {
+                            "tester_type_w": "tester_.tester_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "query": "[[$(tester_type_w)]]"
+                            }
+                        }
+                    },
+                    "tester_channel_default": {
+                        "title": "Channel(s) (default)",
+                        "title*": {
+                            "de": "Kanal/Kanäle (Standardwert)"
+                        },
+                        "description": "Channel(s) used to perform the test",
+                        "description*": {
+                            "de": "Kanal/Kanäle, mit dem der Test durchgeführt wurde/wird"
+                        },
+                        "type": "array",
+                        "format": "table",
+                        "items": {
+                            "title": "Channel",
+                            "title*": {
+                                "de": "Kanal"
+                            },
+                            "type": "string"
+                        },
+                        "eval_template": [
+                            {
+                                "type": "mustache-wikitext",
+                                "mode": "render",
+                                "value": "{{#tester_channel_default}}{{.}};{{/tester_channel_default}}"
+                            }
+                        ]
+                    }
+                },
+                "eval_template": [
+                    {
+                        "type": "wikitext",
+                        "mode": "render",
+                        "$comment": "eval_template of tester_channel_default generates a string with trailing seperator, e.g. '1;2;3;'. To replace all but the last ';' with an ',' we apply #arraymap, with splits a string and merges the parts without a trailing seperator.",
+                        "value": "{{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: [[:{{{tester_type}}}]] {{#if: {{{tester_default|}}} | ({{#switch:{{USERLANGUAGECODE}}|en=default|de=Default|#default=default}}: [[{{{tester_default}}}]]{{#if: {{{tester_channel_default|}}} |, Ch: {{#arraymap:{{{tester_channel_default|}}}|;|x|x|, <nowiki />}} | |}}) | ({{#switch:{{USERLANGUAGECODE}}|en=no default|de=Kein Default|#default=no default}})}}"
+                    }
+                ]
+            }
+        },
+        "test_procedure": {
+            "title": "Test procedure(s) (default)",
+            "title*": {
+                "de": "Testprozedur(en) (Standardwert)"
+            },
+            "type": "array",
+            "format": "table",
+            "items": {
+                "title": "Procedure",
+                "title*": {
+                    "de": "Prozedur"
+                },
+                "type": "object",
+                "id": "procedure_",
+                "required": [
+                    "uuid"
+                ],
+                "defaultProperties": [
+                    "procedure_type",
+                    "procedure_default"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "procedure_type": {
+                        "title": "Type",
+                        "title*": {
+                            "de": "Typ"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "todo: we need an any-subcategory-of shortcut",
+                                "query": "[[:Category:OSWe2d16d21532a40cfa0abe577629d5c37]]OR[[SubClassOf::Category:OSWe2d16d21532a40cfa0abe577629d5c37]]OR[[SubClassOf.SubClassOf::Category:OSWe2d16d21532a40cfa0abe577629d5c37]]OR[[SubClassOf.SubClassOf.SubClassOf::Category:OSWe2d16d21532a40cfa0abe577629d5c37]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSWe2d16d21532a40cfa0abe577629d5c37]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSWe2d16d21532a40cfa0abe577629d5c37]]"
+                            }
+                        }
+                    },
+                    "procedure_default": {
+                        "title": "Default",
+                        "title*": {
+                            "de": "Standardwert"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSWe2d16d21532a40cfa0abe577629d5c37",
+                        "watch": {
+                            "procedure_type_w": "procedure_.procedure_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "query": "[[$(procedure_type_w)]]"
+                            }
+                        }
+                    }
+                },
+                "eval_template": [
+                    {
+                        "type": "wikitext",
+                        "mode": "render",
+                        "value": "{{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: [[:{{{procedure_type}}}]] {{#if: {{{procedure_default|}}} | ({{#switch:{{USERLANGUAGECODE}}|en=default|de=Default|#default=default}}: [[{{{procedure_default}}}]]) | ({{#switch:{{USERLANGUAGECODE}}|en=no default|de=Kein Default|#default=no default}})}} "
+                    }
+                ]
+            }
+        }
+    }
+}

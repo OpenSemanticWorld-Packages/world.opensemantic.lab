@@ -1,9 +1,15 @@
 {
     "@context": [
-        "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema",
         {
-            "pubchem_cid": "Property:HasPubchemId"
-        }
+            "mixing_process": {
+                "@id": "Property:HasSourceProcess",
+                "@type": "@id"
+            },
+            "source_process": {
+                "@type": "@id"
+            }
+        },
+        "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema"
     ],
     "allOf": [
         {
@@ -12,66 +18,127 @@
     ],
     "type": "object",
     "uuid": "0583b134-c618-484c-9911-a3dff145c7eb",
-    "title": "ChemicalCompound",
+    "title": "ChemicalSubstance",
     "title*": {
-        "en": "Chemical compound",
-        "de": "Chemische Verbindung"
+        "en": "Chemical substance",
+        "de": "Chemische Substanz"
     },
-    "data_source_maps": [
-        {
-            "id": "pubchem.ncbi.nlm.nih.gov",
-            "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{{pubchem_cid}}/JSON",
-            "label": "PubChem",
-            "required": [
-                "pubchem_cid"
-            ],
-            "object_map": {
-                "cas_numbers": "$..[?(@.TOCHeading=='CAS')].Information..Value.StringWithMarkup..String"
-            }
-        }
+    "description": "Chemical substance composed of many identical molecules",
+    "description*": {
+        "en": "Chemical substance composed of many identical molecules",
+        "de": "Chemische Substanz, die aus vielen identischen Molekülen besteht"
+    },
+    "required": [
+        "type",
+        "source_process_"
+    ],
+    "defaultProperties": [
+        "quantity_statements",
+        "mixing_process"
     ],
     "properties": {
-        "pubchem_cid": {
-            "title": "PubChem CID",
+        "type": {
+            "default": [
+                "Category:OSW0583b134c618484c9911a3dff145c7eb"
+            ]
+        },
+        "source_process_": {
+            "title": "Source process",
+            "title*": {
+                "de": "Quellprozess"
+            },
+            "description": "Empty property to provide an eval template for a query",
+            "description*": {
+                "de": "Leere Eigenschaft zur Bereitstellung einer Eval-Vorlage für eine Abfrage"
+            },
             "type": "string",
-            "options": {
-                "conditional_visible": {
-                    "modes": "query"
+            "default": "",
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "{{=<% %>=}} {{#ask:[[HasOutput::{{FULLPAGENAME}}]]|format=plain}}"
                 }
+            ],
+            "options": {
+                "hidden": true
+            }
+        },
+        "mixing_process": {
+            "allOf": [
+                {
+                    "$ref": "/wiki/Category:OSWb8435fabafcb48f985422448e9df5faa?action=raw&slot=jsonschema"
+                }
+            ],
+            "title": "Mixing (Source process)",
+            "title*": {
+                "de": "Mischen (Ursprungsprozess)"
+            },
+            "description": "Process that describes the mixing of components to create this chemical substance. Addtional details of the mixing process can be stated.",
+            "description*": {
+                "de": "Prozess, der das Mischen der Komponenten zur Herstellung dieser chemischen Substanz beschreibt. Weitere Einzelheiten des Mischvorgangs können angegeben werden."
             },
             "eval_template": [
                 {
                     "type": "mustache-wikitext",
                     "mode": "render",
-                    "value": "[https://pubchem.ncbi.nlm.nih.gov/compound/{{pubchem_cid}} {{pubchem_cid}}]"
+                    "value": "{{=<% %>=}}<ul><%#mixing_process.input_components%><li><%component_amount.component_amount_numerical_value%> <%component_amount.component_amount_unit%> [[<%component_instance%>]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: {{#ask:[[<%component_instance%>]]|?HasType=|format=plain|mainlabel=-}})</li><%/mixing_process.input_componentss%></ul>"
                 }
-            ]
-        },
-        "cas_numbers": {
-            "type": "array",
-            "title": "CAS Number(s)",
-            "title*": {
-                "de": "CAS Nummer(n)"
-            },
-            "items": {
-                "type": "string",
-                "title": "CAS",
-                "title*": {
-                    "de": "CAS"
+            ],
+            "required": [
+                "label",
+                "output_mixes"
+            ],
+            "properties": {
+                "input_components": {
+                    "propertyOrder": -10
+                },
+                "type": {
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "label": {
+                    "items": {
+                        "properties": {
+                            "text": {
+                                "watch": {
+                                    "root_uuid": "uuid"
+                                },
+                                "readonly": true,
+                                "dynamic_template": "Mixing of Item:OSW{{#replace '-' ''}}{{{root_uuid}}}{{/replace}}"
+                            },
+                            "lang": {
+                                "readonly": true
+                            }
+                        }
+                    },
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "description": {
+                    "description": "Description of the mixing process.",
+                    "description*": {
+                        "de": "Beschreibung des Mischprozesses"
+                    },
+                    "propertyOrder": -9
+                },
+                "output_mixes": {
+                    "items": {
+                        "watch": {
+                            "root_uuid": "uuid"
+                        },
+                        "dynamic_template": "Item:OSW{{#replace '-' ''}}{{{root_uuid}}}{{/replace}}"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "readonly": true,
+                    "options": {
+                        "hidden": true
+                    }
                 }
             }
-        },
-        "type": {
-            "default": [
-                "Category:OSW0583b134c618484c9911a3dff145c7eb"
-            ]
         }
-    },
-    "description": "Chemical substance composed of many identical molecules",
-    "description*": {
-        "en": "Chemical substance composed of many identical molecules"
-    },
-    "required": [
-        "type"
-    ]
+    }
 }

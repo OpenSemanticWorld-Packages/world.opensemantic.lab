@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "/wiki/Category:OSWf0fe562f422d49c6877490b3dfee2f3f?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWf0fe562f422d49c6877490b3dfee2f3f?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "e0572f27-9184-4010-9628-86b892970b4d",
+    "title": "ControlledEnvironment",
+    "title*": {
+        "en": "Controlled environment",
+        "de": "Kontrollierte Umgebung"
+    },
+    "description": "",
+    "description*": {},
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWe0572f2791844010962886b892970b4d"
+            ]
+        }
+    }
+}

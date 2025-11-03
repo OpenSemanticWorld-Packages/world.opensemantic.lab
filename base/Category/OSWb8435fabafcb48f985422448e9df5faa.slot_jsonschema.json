@@ -1,0 +1,223 @@
+{
+    "@context": [
+        {
+            "input_components": {
+                "@id": "Property:HasStatement",
+                "@type": "@id",
+                "@context": {
+                    "component_instance_property": "Property:HasProperty",
+                    "component_instance": "Property:HasObject"
+                }
+            },
+            "output_mixes": {
+                "@id": "Property:HasOutput",
+                "@type": "@id"
+            }
+        },
+        "/wiki/Category:OSW293552368bcf4a3681682671f8d47d8f?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW293552368bcf4a3681682671f8d47d8f?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "b8435fab-afcb-48f9-8542-2448e9df5faa",
+    "title": "MixingOfChemicalSubstances",
+    "title*": {
+        "en": "Mixing of chemical substances",
+        "de": "Mischen von chemischen Substanzen"
+    },
+    "description": "The process of mixing two or more chemical substances, creating a mixture of chemical substances (also an instance of Chemical Substance)",
+    "description*": {
+        "en": "The process of mixing two or more chemical substances, creating a mixture of chemical substances (also an instance of Chemical Substance)",
+        "de": "Der Prozess des Mischens von zwei oder mehr chemischen Substanz, wodurch ein Gemisch chemischer Substanzen entsteht (ebenso eine Instanz von Chemischer Substanz)"
+    },
+    "id": "cs_mixing_root",
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "input_components",
+        "output_mixes"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWb8435fabafcb48f985422448e9df5faa"
+            ]
+        },
+        "input": {
+            "options": {
+                "hidden": true
+            }
+        },
+        "output": {
+            "options": {
+                "hidden": true
+            }
+        },
+        "input_components": {
+            "type": "array",
+            "format": "table",
+            "title": "Input components",
+            "title*": {
+                "de": "Input-Komponenten"
+            },
+            "description": "Input of the mixing process",
+            "description*": {
+                "de": "Inputs des Mischprozesses"
+            },
+            "id": "input_components",
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "{{=<% %>=}}<ul><%#input_components%><li><%component_amount.component_amount_numerical_value%> <%component_amount.component_amount_unit%> [[<%component_instance%>]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: {{#ask:[[<%component_instance%>]]|?HasType=|format=plain|mainlabel=-}})</li><%/input_componentss%></ul>"
+                }
+            ],
+            "items": {
+                "type": "object",
+                "title": "Component",
+                "title*": {
+                    "de": "Komponente"
+                },
+                "id": "input_components_item_root",
+                "required": [
+                    "uuid",
+                    "component_instance_property",
+                    "component_instance"
+                ],
+                "defaultProperties": [
+                    "component_type",
+                    "component_instance",
+                    "component_amount"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "component_type": {
+                        "title": "Type",
+                        "title*": {
+                            "de": "Typ"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:Category",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "ChemicalSubstance",
+                                "query": "[[:Category:OSW0583b134c618484c9911a3dff145c7eb]] OR [[SubClassOf::Category:OSW0583b134c618484c9911a3dff145c7eb]] OR [[SubClassOf.SubClassOf::Category:OSW0583b134c618484c9911a3dff145c7eb]] OR [[SubClassOf.SubClassOf.SubClassOf::Category:OSW0583b134c618484c9911a3dff145c7eb]] OR [[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW0583b134c618484c9911a3dff145c7eb]] OR [[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW0583b134c618484c9911a3dff145c7eb]]"
+                            }
+                        },
+                        "default": "Category:OSW0583b134c618484c9911a3dff145c7eb"
+                    },
+                    "component_instance_property": {
+                        "type": "string",
+                        "default": "Property:HasInput",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "component_instance": {
+                        "title": "Instance",
+                        "title*": {
+                            "de": "Instanz"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSW0583b134c618484c9911a3dff145c7eb",
+                        "watch": {
+                            "component_type": "input_components_item_root.component_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "ChemicalSubstance",
+                                "query": "[[$(component_type)]]"
+                            }
+                        }
+                    },
+                    "component_amount": {
+                        "type": "object",
+                        "title": "Amount",
+                        "title*": {
+                            "en": "Amount",
+                            "de": "Menge"
+                        },
+                        "description": "The amount of the component",
+                        "description*": {
+                            "de": "Die Menge der Komponente"
+                        },
+                        "$comment": "$rework: add unit",
+                        "required": [
+                            "uuid",
+                            "component_amount_value",
+                            "component_amount_numerical_value",
+                            "component_amount_unit"
+                        ],
+                        "defaultProperties": [
+                            "component_amount_numerical_value",
+                            "component_amount_unit"
+                        ],
+                        "properties": {
+                            "uuid": {
+                                "type": "string",
+                                "format": "uuid",
+                                "options": {
+                                    "hidden": true
+                                }
+                            },
+                            "component_amount_numerical_value": {
+                                "type": "number",
+                                "title": "Numerical value",
+                                "title*": {
+                                    "de": "Numerischer Wert"
+                                }
+                            },
+                            "component_amount_unit": {
+                                "type": "string",
+                                "title": "Unit",
+                                "title*": {
+                                    "de": "Unit"
+                                }
+                            },
+                            "component_amount_value": {
+                                "type": "string",
+                                "watch": {
+                                    "num_val": "input_components_item_root.component_amount.component_amount_numerical_value",
+                                    "unit": "input_components_item_root.component_amount.component_amount_unit"
+                                },
+                                "template": "{{num_val}} {{unit}}",
+                                "options": {
+                                    "hidden": true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "output_mixes": {
+            "type": "array",
+            "format": "table",
+            "title": "Output mixes",
+            "title*": {
+                "de": "Ergebnis-Mischungen"
+            },
+            "items": {
+                "title": "Output mix",
+                "title*": {
+                    "de": "Ergebnis-Mischung"
+                },
+                "type": "string",
+                "format": "autocomplete",
+                "range": "Category:OSW0583b134c618484c9911a3dff145c7eb"
+            }
+        }
+    }
+}

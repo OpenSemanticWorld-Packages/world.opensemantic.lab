@@ -1,0 +1,27 @@
+{
+    "subclass_of": [
+        "Category:OSWf0fe562f422d49c6877490b3dfee2f3f",
+        "Category:OSWda27e2fff10848ebb728ffb69c49a16d"
+    ],
+    "uuid": "156137fa-7491-4572-ad29-98f7f6594bca",
+    "name": "DataDevice",
+    "label": [
+        {
+            "text": "Data Device",
+            "lang": "en"
+        },
+        {
+            "text": "Datenproduzierendes Gerät",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "This is a Subcategory of Device, which represents a Device that has a data output.",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        "Category:Category"
+    ]
+}

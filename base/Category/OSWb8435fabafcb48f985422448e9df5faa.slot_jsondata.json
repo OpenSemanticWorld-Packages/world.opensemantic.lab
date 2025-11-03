@@ -1,0 +1,30 @@
+{
+    "type": [
+        "Category:OSWc11438cd6c814ed1a5a253555ee351b4"
+    ],
+    "subclass_of": [
+        "Category:OSW293552368bcf4a3681682671f8d47d8f"
+    ],
+    "uuid": "b8435fab-afcb-48f9-8542-2448e9df5faa",
+    "label": [
+        {
+            "text": "Mixing of chemical substances",
+            "lang": "en"
+        },
+        {
+            "text": "Mischen von chemischer Substanzen",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "The process of mixing two or more chemical substances, creating a mixture of chemical substances (also an instance of Chemical Substance)",
+            "lang": "en"
+        },
+        {
+            "text": "Der Prozess des Mischens von zwei oder mehr chemischen Substanzen, wodurch ein Gemisch chemischer Substanzen entsteht (ebenso eine Instanz von Chemischer Substanz)",
+            "lang": "de"
+        }
+    ],
+    "name": "MixingOfChemicalSubstances"
+}

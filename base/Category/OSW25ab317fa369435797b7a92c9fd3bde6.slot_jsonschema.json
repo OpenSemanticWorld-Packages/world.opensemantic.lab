@@ -1,0 +1,82 @@
+{
+    "@context": [
+        "/wiki/Category:OSW182916df3eee472e88e7c8d114a7fe27?action=raw&slot=jsonschema",
+        {
+            "height": "Property:HasHeight",
+            "width": "Property:HasWidth",
+            "length": "Property:HasLength",
+            "weight": "Property:HasWeight"
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW182916df3eee472e88e7c8d114a7fe27?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "25ab317f-a369-4357-97b7-a92c9fd3bde6",
+    "title": "SampleType",
+    "title*": {
+        "en": "Sample type",
+        "de": "Probentyp"
+    },
+    "description": "Type of a sample, e.g., the type number specified by the manufacturer",
+    "description*": {
+        "en": "Type of a sample, e.g., the type number specified by the manufacturer",
+        "de": "Typ einer Probe, z.B. die Typennummer wie vom Hersteller angegeben"
+    },
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW25ab317fa369435797b7a92c9fd3bde6"
+            ]
+        },
+        "height": {
+            "title": "Height / mm",
+            "title*": {
+                "de": "Höhe / mm"
+            },
+            "description": "Height of the sample in mm",
+            "description*": {
+                "de": "Höhe der Probe in mm"
+            },
+            "type": "number"
+        },
+        "width": {
+            "title": "Width / mm",
+            "title*": {
+                "de": "Breite / mm"
+            },
+            "description": "Width of the sample in mm",
+            "description*": {
+                "de": "Breite der Probe in mm"
+            },
+            "type": "number"
+        },
+        "length": {
+            "title": "Length / mm",
+            "title*": {
+                "de": "Länge / mm"
+            },
+            "description": "Length of the sample in mm",
+            "description*": {
+                "de": "Länge der Probe in mm"
+            },
+            "type": "number"
+        },
+        "weight": {
+            "title": "Weight / g",
+            "title*": {
+                "de": "Gewicht / g"
+            },
+            "description": "Weight of the sample in g",
+            "description*": {
+                "de": "Gewicht der Probe in g"
+            },
+            "type": "number"
+        }
+    }
+}

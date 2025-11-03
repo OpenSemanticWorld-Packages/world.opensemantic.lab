@@ -1,0 +1,14 @@
+<table class="info_box">
+<tr>
+<th class="heading" colspan="2">{{{_label_schema|Data Device}}}</th>
+</tr>
+<!--
+<tr>
+<td class="subheading" colspan="2">Info</td>
+</tr>
+-->
+<tr>
+<th>{{#switch:{{USERLANGUAGECODE}}|en=Sensors|de=Sensoren}}</th>
+<td>{{#ask: [[Category:OSWef736b657e50476a96fcc094a7747b60]][[HasParentDevice::{{FULLPAGENAME}}]]}}</td>
+</tr>
+</table>

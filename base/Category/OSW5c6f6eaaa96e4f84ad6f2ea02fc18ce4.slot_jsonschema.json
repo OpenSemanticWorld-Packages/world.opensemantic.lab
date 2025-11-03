@@ -1,0 +1,544 @@
+{
+    "@context": [
+        {
+            "conservation_bool": {
+                "@id": "Property:HasConservation",
+                "@type": "xsd:boolean"
+            },
+            "conservation_details": {
+                "@id": "Property:HasConservationDetails",
+                "@type": "xsd:string"
+            },
+            "output_samples": {
+                "@id": "Property:HasStatement",
+                "@type": "@id",
+                "@context": {
+                    "sample_instance": "Property:HasObject",
+                    "sample_instance_property": "Property:HasProperty"
+                }
+            },
+            "persons_present": {
+                "@id": "Property:HasWitness",
+                "@type": "@id"
+            },
+            "sample_transport": {
+                "@id": "Property:HasSampleTransport",
+                "@type": "@id"
+            },
+            "sampling_details": {
+                "@id": "Property:HasSamplingDetails",
+                "@type": "@id"
+            },
+            "sampling_execution": {
+                "@id": "Property:HasSamplingExecution",
+                "@type": "xsd:string"
+            },
+            "sampling_point": {
+                "@id": "Property:HasSamplingPoint",
+                "@type": "@id"
+            },
+            "sampling_point_notes": {
+                "@id": "Property:HasNotes",
+                "@type": "xsd:string"
+            },
+            "sampling_type": {
+                "@id": "Property:HasSamplingType",
+                "@type": "xsd:string"
+            },
+            "source": {
+                "@id": "Property:HasSource",
+                "@type": "@id"
+            },
+            "source_name": {
+                "@id": "Property:HasSource",
+                "@type": "xsd:string"
+            },
+            "transport_description": {
+                "@id": "Property:HasTransportDescription",
+                "@type": "xsd:string"
+            },
+            "transport_notes": {
+                "@id": "Property:HasTransportNotes",
+                "@type": "xsd:string"
+            },
+            "weather": {
+                "@id": "Property:HasWeather",
+                "@type": "@id",
+                "@context": [
+                    {
+                        "weather_date": {
+                            "@id": "Property:HasDate",
+                            "@type": "xsd:dateTime"
+                        },
+                        "weather_description": {
+                            "@id": "Property:HasDescription",
+                            "@type": "xsd:string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/wiki/Category:OSW0e7fab2262fb4427ad0fa454bc868a0d?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW0e7fab2262fb4427ad0fa454bc868a0d?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "01b854aa-5d15-40cc-be02-bb98de641892",
+    "title": "Sampling",
+    "title*": {
+        "en": "Sampling",
+        "de": "Probennahme"
+    },
+    "description": "Process of taking a sample, e.g., filling a container from a reservoir (river, lake, larger container)",
+    "description*": {
+        "en": "Process of taking a sample, e.g., filling a container from a reservoir (river, lake, larger container)",
+        "de": "Der Prozess der Probennahme, z.B. das Befüllen eines Behälters aus einem Reservoir (Fluss, See, größerer Behälter)"
+    },
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "output_samples",
+        "sampling_point",
+        "sampling_details",
+        "sample_transport",
+        "actionees",
+        "persons_present",
+        "project",
+        "location",
+        "tool",
+        "start_date_time"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW5c6f6eaaa96e4f84ad6f2ea02fc18ce4"
+            ]
+        },
+        "start_date_time": {
+            "title": "Date and time",
+            "title*": {
+                "de": "Datum und Uhrzeit"
+            },
+            "description": "The date and time when the sampling was started.",
+            "description*": {
+                "de": "Tag und Uhrzeit an dem die Probenahme begonnen wurde."
+            },
+            "propertyOrder": 10
+        },
+        "actionees": {
+            "title": "Sampler(s)",
+            "title*": {
+                "de": "Probennehmer:innen"
+            },
+            "description": "Person(s) taking the sample(s)",
+            "description*": {
+                "de": "Person(en), welche die Probe(n) nimmt"
+            },
+            "propertyOrder": 20
+        },
+        "persons_present": {
+            "type": "array",
+            "title": "Persons present",
+            "title*": {
+                "de": "Anwesende Personen"
+            },
+            "description": "Person(s) present during sampling.",
+            "description*": {
+                "de": "Person(en), welche während der Probennahme anwesend waren."
+            },
+            "items": {
+                "type": "string",
+                "title": "Actionee",
+                "title*": {
+                    "de": "Akteur"
+                },
+                "format": "autocomplete",
+                "options": {
+                    "autocomplete": {
+                        "category": "Category:OSW44deaa5b806d41a2a88594f562b110e9"
+                    }
+                }
+            },
+            "propertyOrder": 30
+        },
+        "project": {
+            "propertyOrder": 40
+        },
+        "location": {
+            "propertyOrder": 50,
+            "description": "Where the samples where taken, e.g., a room, a building, a body of water or some geolocation.",
+            "description*": {
+                "de": "Wo die Proben entnommen wurden, z. B. in einem Raum, einem Gebäude, einem Gewässer oder an einem geografischen Ort."
+            }
+        },
+        "sampling_point": {
+            "type": "object",
+            "title": "Sampling point",
+            "title*": {
+                "de": "Probennahmestelle"
+            },
+            "description": "The location where the sample(s) was taken, including details.",
+            "description*": {
+                "de": "Der Ort an dem die Probe(n) genommen wurde, inklusive Details."
+            },
+            "propertyOrder": 60,
+            "required": [
+                "uuid"
+            ],
+            "defaultProperties": [
+                "source",
+                "weather",
+                "sampling_point_notes"
+            ],
+            "properties": {
+                "uuid": {
+                    "type": "string",
+                    "format": "uuid",
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "source": {
+                    "title": "Source",
+                    "title*": {
+                        "en": "Source",
+                        "de": "Quelle"
+                    },
+                    "description": "The source of the sample. This can be an organizational unit, a location, or a physical item.",
+                    "description*": {
+                        "de": "Die Quelle der Probe. Dies kann eine Organisationseinheit, ein Ort oder ein physisches Objekt sein."
+                    },
+                    "type": "string",
+                    "format": "autocomplete",
+                    "options": {
+                        "autocomplete": {
+                            "$comment": "Organizational unit, Location, Physical item",
+                            "query": "[[Category:OSW3cb8cef2225e403092f098f99bc4c472]] OR [[Category:OSW3d238d05316e45a4ac95a11d7b24e36b]] OR [[Category:OSW37a57741ae2e4dd4b29b1172b6848be8]]"
+                        }
+                    }
+                },
+                "source_name": {
+                    "title": "Source (text)",
+                    "title*": {
+                        "de": "Quelle (Text)"
+                    },
+                    "description": "Its prefered to select or create a source from or in the autocomplete field 'Source'.",
+                    "description*": {
+                        "de": "Es wird empfohlen, eine Quelle aus dem Autocomplete-Feld 'Quelle' auszuwählen oder zu erstellen."
+                    },
+                    "type": "string"
+                },
+                "weather": {
+                    "type": "array",
+                    "format": "table",
+                    "title": "Weather",
+                    "title*": {
+                        "de": "Wetter"
+                    },
+                    "description": "Description of relevant weather conditions.",
+                    "description*": {
+                        "de": "Beschreibung der relevanten Wetterbedingungen."
+                    },
+                    "items": {
+                        "type": "object",
+                        "title": "Weather condition",
+                        "title*": {
+                            "de": "Wetterbedingung"
+                        },
+                        "required": [
+                            "weather_date",
+                            "weather_description",
+                            "uuid"
+                        ],
+                        "defaultProperties": [
+                            "weather_date",
+                            "weather_description"
+                        ],
+                        "properties": {
+                            "uuid": {
+                                "type": "string",
+                                "format": "uuid",
+                                "options": {
+                                    "hidden": true
+                                }
+                            },
+                            "weather_date": {
+                                "type": "string",
+                                "title": "Report date",
+                                "title*": {
+                                    "de": "Berichtsdatum"
+                                },
+                                "format": "date",
+                                "options": {
+                                    "flatpicker": {}
+                                }
+                            },
+                            "weather_description": {
+                                "title": "Description",
+                                "title*": {
+                                    "de": "Beschreibung"
+                                },
+                                "type": "textarea"
+                            }
+                        }
+                    }
+                },
+                "sampling_point_notes": {
+                    "type": "string",
+                    "title": "Notes",
+                    "title*": {
+                        "de": "Notizen"
+                    },
+                    "description": "Notes about specifics and the surrounding of the sampling point.",
+                    "description*": {
+                        "de": "Notizen zu Besonderheiten und der Umgebung der Probennahmestelle."
+                    },
+                    "format": "textarea"
+                }
+            }
+        },
+        "input": {
+            "description": "Consumption materials used for the sampling process.",
+            "description*": {
+                "de": "Verbrauchsmaterialien, die für den Prozess der Probennahme verwendet wurden."
+            },
+            "propertyOrder": 70
+        },
+        "tool": {
+            "description": "Tools used for the sampling process.",
+            "description*": {
+                "de": "Werkzeuge und Hilfsmittel, die für den Prozess der Probennahme verwendet wurden."
+            },
+            "propertyOrder": 80
+        },
+        "sampling_details": {
+            "type": "object",
+            "title": "Sampling details",
+            "title*": {
+                "de": "Probennahme-Details"
+            },
+            "description": "Details about the sampling process.",
+            "description*": {
+                "de": "Details zum Prozess der Probennahme."
+            },
+            "propertyOrder": 90,
+            "required": [
+                "uuid",
+                "sampling_type",
+                "sampling_execution"
+            ],
+            "defaultProperties": [
+                "sampling_type",
+                "sampling_execution",
+                "conservation_bool",
+                "conservation_details"
+            ],
+            "properties": {
+                "uuid": {
+                    "type": "string",
+                    "format": "uuid",
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "sampling_type": {
+                    "title": "Sampling type",
+                    "title*": {
+                        "de": "Art der Probennahme"
+                    },
+                    "description": "The method used to take the sample.",
+                    "description*": {
+                        "de": "Die Methode, die zur Probenahme verwendet wurde."
+                    },
+                    "type": "string",
+                    "format": "textarea"
+                },
+                "sampling_execution": {
+                    "title": "Sampling execution",
+                    "title*": {
+                        "de": "Durchführung der Probennahme"
+                    },
+                    "description": "Description of the sampling process.",
+                    "description*": {
+                        "de": "Beschreibung des Prozesses der Probennahme."
+                    },
+                    "type": "string",
+                    "format": "textarea"
+                },
+                "conservation_bool": {
+                    "title": "Conservation",
+                    "title*": {
+                        "de": "Konservierung"
+                    },
+                    "description": "Was the sample conserved?",
+                    "description*": {
+                        "de": "Wurde die Probe konserviert?"
+                    },
+                    "type": "boolean",
+                    "format": "checkbox",
+                    "default": false
+                },
+                "conservation_details": {
+                    "title": "Conservation details",
+                    "title*": {
+                        "de": "Details zur Konservierung"
+                    },
+                    "description": "Description of the conservation method. Leave empty if 'none'.",
+                    "description*": {
+                        "de": "Beschreibung der Konservierungsmethode. Leer lassen, wenn 'keine'."
+                    },
+                    "type": "string",
+                    "format": "textarea"
+                }
+            }
+        },
+        "output": {
+            "options": {
+                "hidden": true
+            }
+        },
+        "output_samples": {
+            "type": "array",
+            "format": "table",
+            "title": "Output samples",
+            "title*": {
+                "de": "Output-Proben"
+            },
+            "description": "Output of the sampling process.",
+            "description*": {
+                "de": "Output der Probenahme."
+            },
+            "id": "output_samples",
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "{{=<% %>=}} <ul><%#output_samples%><li>[[<%sample_instance%>]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: {{#ask:[[<%sample_instance%>]]|?HasType=|format=plain|mainlabel=-}})</li><%/output_samples%></ul>"
+                }
+            ],
+            "items": {
+                "type": "object",
+                "title": "Taken sample",
+                "title*": {
+                    "de": "Genommene probe"
+                },
+                "id": "sample_item",
+                "required": [
+                    "uuid",
+                    "sample_instance_property",
+                    "sample_instance"
+                ],
+                "defaultProperties": [
+                    "sample_type",
+                    "sample_instance"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "sample_type": {
+                        "title": "Type",
+                        "title*": {
+                            "de": "Typ"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:Category",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "Sample",
+                                "query": "[[:Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]] OR [[SubClassOf::Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]] OR [[SubClassOf.SubClassOf::Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]] OR [[SubClassOf.SubClassOf.SubClassOf::Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]] OR [[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]]OR [[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3]]"
+                            }
+                        },
+                        "default": "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3"
+                    },
+                    "sample_instance_property": {
+                        "type": "string",
+                        "default": "Property:HasOutput",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "sample_instance": {
+                        "title": "Instance",
+                        "title*": {
+                            "de": "Instanz"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3",
+                        "watch": {
+                            "sample_type_": "sample_item.sample_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "Sample",
+                                "query": "[[$(sample_type_)]]"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "sample_transport": {
+            "type": "object",
+            "title": "Sample transport",
+            "title*": {
+                "de": "Proben-Transport"
+            },
+            "description": "Details about the transport of the sample.",
+            "description*": {
+                "de": "Details zum Transport der Probe."
+            },
+            "propertyOrder": 27,
+            "required": [
+                "uuid"
+            ],
+            "defaultProperties": [
+                "transport_description",
+                "transport_notes"
+            ],
+            "properties": {
+                "uuid": {
+                    "type": "string",
+                    "format": "uuid",
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "transport_description": {
+                    "title": "Description",
+                    "title*": {
+                        "de": "Beschreibung"
+                    },
+                    "description": "Description of the transport process.",
+                    "description*": {
+                        "de": "Beschreibung des Transportprozesses."
+                    },
+                    "type": "string",
+                    "format": "textarea"
+                },
+                "transport_notes": {
+                    "title": "Notes",
+                    "title*": {
+                        "de": "Notizen"
+                    },
+                    "description": "Notes about the transport process.",
+                    "description*": {
+                        "de": "Notizen zum Transportprozess."
+                    },
+                    "type": "string",
+                    "format": "textarea"
+                }
+            }
+        }
+    }
+}

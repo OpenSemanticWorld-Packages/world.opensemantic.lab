@@ -1,0 +1,110 @@
+{
+    "@context": [
+        "/wiki/Category:OSWca99a9bb9ad24386b222d18a73c2af5e?action=raw&slot=jsonschema",
+        {
+            "constituents": {
+                "@type": "@id",
+                "@id": "Property:HasStatement",
+                "@context": {
+                    "property": "Property:HasProperty",
+                    "type": "Property:HasValue"
+                }
+            }
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWca99a9bb9ad24386b222d18a73c2af5e?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "182916df-3eee-472e-88e7-c8d114a7fe27",
+    "title": "MaterialType",
+    "title*": {
+        "en": "Material Type"
+    },
+    "description": "Helps to create Material subcategories",
+    "description*": {
+        "en": "Helps to create Material subcategories"
+    },
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW182916df3eee472e88e7c8d114a7fe27"
+            ]
+        },
+        "constituents": {
+            "type": "array",
+            "format": "tabs",
+            "title": "Constituents",
+            "title*": {
+                "de": "Bestandteile"
+            },
+            "description": "Components or parts",
+            "description*": {
+                "de": "Komponenten oder Teile"
+            },
+            "items": {
+                "type": "object",
+                "title": "Item",
+                "title*": {
+                    "de": "Item"
+                },
+                "headerTemplate": "{{i1}} - {{self.name}}",
+                "required": [
+                    "name",
+                    "type",
+                    "uuid",
+                    "property"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "property": {
+                        "type": "string",
+                        "default": "Property:HasPart",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "is_array": {
+                        "title": "Is array",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "type": {
+                        "title": "Type",
+                        "type": "string",
+                        "format": "autocomplete",
+                        "$comment": "Material",
+                        "range": "Category:OSW31ca9a739cb24079b36824045c0832aa",
+                        "options": {
+                            "autocomplete": {
+                                "$comment": "todo: we need an any-subcategory-of shortcut",
+                                "query": "[[SubClassOf::Category:OSW31ca9a739cb24079b36824045c0832aa]]OR[[SubClassOf.SubClassOf::Category:OSW31ca9a739cb24079b36824045c0832aa]]OR[[SubClassOf.SubClassOf.SubClassOf::Category:OSW31ca9a739cb24079b36824045c0832aa]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW31ca9a739cb24079b36824045c0832aa]]OR[[SubClassOf.SubClassOf.SubClassOf.SubClassOf.SubClassOf::Category:OSW31ca9a739cb24079b36824045c0832aa]]"
+                            }
+                        }
+                    },
+                    "default": {
+                        "title": "Default value",
+                        "title*": {
+                            "de": "Standardwert"
+                        },
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

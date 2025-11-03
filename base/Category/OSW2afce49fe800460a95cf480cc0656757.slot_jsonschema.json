@@ -1,0 +1,237 @@
+{
+    "@context": [
+        {
+            "cas_numbers": {
+                "@id": "Property:HasCasNumber",
+                "@type": "xsd:string"
+            },
+            "inchi_id": {
+                "@id": "Property:HasInchiId",
+                "@type": "xsd:string"
+            },
+            "inchi_key": {
+                "@id": "Property:HasInchiKey",
+                "@type": "xsd:string"
+            },
+            "iupac_name": {
+                "@id": "Property:HasIupacName",
+                "@type": "xsd:string"
+            },
+            "molecular_weight": {
+                "@id": "Property:HasMolecularWeight",
+                "@type": "xsd:float"
+            },
+            "pubchem_cid": {
+                "@id": "Property:HasPubchemCid",
+                "@type": "xsd:string"
+            },
+            "pubchem_sid": {
+                "@id": "Property:HasPubchemSid",
+                "@type": "xsd:string"
+            },
+            "smiles_notation": {
+                "@id": "Property:HasSmilesNotation",
+                "@type": "xsd:string"
+            },
+            "sum_formula": {
+                "@id": "Property:HasSumFormula",
+                "@type": "xsd:string"
+            }
+        },
+        "/wiki/Category:OSW182916df3eee472e88e7c8d114a7fe27?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW182916df3eee472e88e7c8d114a7fe27?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "2afce49f-e800-460a-95cf-480cc0656757",
+    "title": "ChemicalSubstanceType",
+    "title*": {
+        "en": "Chemical Substance Type",
+        "de": "Typ von Chemische Substanz"
+    },
+    "description": "Helps to create subcategories of Chemical Substance.",
+    "description*": {
+        "de": "Hilft dabei Subkategorien von chemischer Verbindung zu erzeugen."
+    },
+    "data_source_maps": [
+        {
+            "id": "pubchem.ncbi.nlm.nih.gov",
+            "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{{pubchem_cid}}/JSON",
+            "label": "PubChem",
+            "required": [
+                "pubchem_cid"
+            ],
+            "object_map": {
+                "cas_numbers": "$..[?(@.TOCHeading=='CAS')].Information..Value.StringWithMarkup..String"
+            }
+        }
+    ],
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "cas_numbers",
+        "pubchem_cid",
+        "iupac_name",
+        "sum_formula",
+        "molecular_weight"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW2afce49fe800460a95cf480cc0656757"
+            ]
+        },
+        "pubchem_cid": {
+            "title": "PubChem CID",
+            "title*": {
+                "de": "PubChem CID"
+            },
+            "description": "The PubChem Compound Identifier (CID) is a unique identifier assigned by the PubChem database to a specific chemical compound or substance.",
+            "description*": {
+                "de": "Die PubChem Compound Identifier (CID) ist eine eindeutige Identifikationsnummer, die von der PubChem-Datenbank für eine spezifische chemische Verbindung oder Substanz vergeben wird."
+            },
+            "type": "string",
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "[https://pubchem.ncbi.nlm.nih.gov/compound/{{pubchem_cid}} {{pubchem_cid}}]"
+                }
+            ]
+        },
+        "cas_numbers": {
+            "type": "array",
+            "format": "table",
+            "title": "CAS Number",
+            "title*": {
+                "de": "CAS-Nummer"
+            },
+            "description": "The Chemical Abstracts Service (CAS) registry number is a unique identifier assigned by the Chemical Abstracts Service to a specific chemical compound or substance.",
+            "description*": {
+                "de": "Die CAS-Nummer (Chemical Abstracts Service) ist eine eindeutige Identifikationsnummer, die von der Chemical Abstracts Service für eine spezifische chemische Verbindung oder Substanz vergeben wird."
+            },
+            "items": {
+                "type": "string",
+                "title": "CAS",
+                "title*": {
+                    "de": "CAS"
+                }
+            }
+        },
+        "iupac_name": {
+            "type": "string",
+            "title": "Preferred IUPAC name",
+            "title*": {
+                "de": "Bevorzugter IUPAC-Name"
+            },
+            "description": "The International Union of Pure and Applied Chemistry (IUPAC) name is the systematic name for a chemical substance, as defined by the IUPAC nomenclature rules.",
+            "description*": {
+                "de": "Der IUPAC-Name (International Union of Pure and Applied Chemistry) ist der systematische Name einer chemischen Substanz, wie er durch die IUPAC-Nomenklatur-Regeln definiert ist."
+            }
+        },
+        "pubchem_sid": {
+            "type": "string",
+            "title": "PubChem SID",
+            "title*": {
+                "de": "PubChem SID"
+            },
+            "description": "The PubChem Substance Identifier (SID) is a unique identifier assigned by the PubChem database to a specific chemical substance.",
+            "description*": {
+                "de": "Die PubChem Substance Identifier (SID) ist eine eindeutige Identifikationsnummer, die von der PubChem-Datenbank für eine spezifische chemische Substanz vergeben wird."
+            },
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "[https://pubchem.ncbi.nlm.nih.gov/substance/{{pubchem_sid}} {{pubchem_sid}}]"
+                }
+            ]
+        },
+        "inchi": {
+            "type": "array",
+            "format": "table",
+            "title": "InChI",
+            "description": "The International Chemical Identifier (InChI) is a textual identifier for chemical substances, designed to provide a standard way to encode molecular information. The condensed, 27 character InChIKey is a hashed version of the full InChI",
+            "description*": {
+                "de": "Der International Chemical Identifier (InChI) ist ein Textbezeichner für chemische Stoffe, der eine Standardmethode zur Codierung molekularer Informationen bieten soll. Der verkürzte, 27 Zeichen umfassende InChIKey ist eine gehashte Version des vollständigen InChI"
+            },
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "<ul>{{#inchi}}<li>InChI={{inchi_id}}, Key: {{inchi_key}}{{/inchi}}</ul>"
+                }
+            ],
+            "items": {
+                "type": "object",
+                "id": "inchi_item",
+                "required": [
+                    "uuid",
+                    "inchi_id"
+                ],
+                "defaultProperties": [
+                    "inchi_id",
+                    "inchi_key"
+                ],
+                "properties": {
+                    "uuid": {
+                        "type": "string",
+                        "format": "uuid",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "inchi_id": {
+                        "title": "InChI",
+                        "type": "string"
+                    },
+                    "inchi_key": {
+                        "title": "InChI key",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "smiles_notation": {
+            "type": "array",
+            "format": "table",
+            "title": "SMILES notation",
+            "title*": {
+                "de": "SMILES-Notation"
+            },
+            "description": "Notation according to the SMILES formal language for describing chemical structures. SMILES stands for Simplified Molecular Input Line Entry System.",
+            "description*": {
+                "de": "Notation nach der SMILES-Formalsprache zur Beschreibung chemischer Strukturen. SMILES steht für Simplified Molecular Input Line Entry System."
+            },
+            "items": {
+                "type": "string"
+            }
+        },
+        "sum_formula": {
+            "title": "Summation formula",
+            "title*": {
+                "de": "Summenformel"
+            },
+            "description": "The sum formula is a notation that specifies the number of atoms of each element in a molecule.",
+            "description*": {
+                "de": "Die Summenformel ist eine Notation, die die Anzahl der Atome jedes Elements in einem Molekül angibt."
+            },
+            "type": "string"
+        },
+        "molecular_weight": {
+            "title": "Molecular weight / g/mol",
+            "title*": {
+                "de": "Molekulargewicht / g/mol"
+            },
+            "description": "The molecular weight is the mass of a molecule, measured in atomic mass units (amu).",
+            "description*": {
+                "de": "Das Molekulargewicht ist die Masse eines Moleküls, gemessen in Atommasseeinheiten (u)."
+            },
+            "type": "number"
+        }
+    }
+}
