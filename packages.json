@@ -12,7 +12,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "requiredPackages": [
                 "world.opensemantic.base"
             ],
@@ -268,26 +268,6 @@
                     }
                 },
                 {
-                    "name": "OSW3886740859ae459588fee73d3bb3c83e",
-                    "label": "RiskAssessmentProcess",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW3886740859ae459588fee73d3bb3c83e.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW3886740859ae459588fee73d3bb3c83e.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW3886740859ae459588fee73d3bb3c83e.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW3886740859ae459588fee73d3bb3c83e.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW3886740859ae459588fee73d3bb3c83e.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
                     "name": "OSW6cc7d1cc87dc4fa8935d5b3d2a9b55c5",
                     "label": "AnalyticalLabProcessType",
                     "namespace": "NS_CATEGORY",
@@ -407,46 +387,6 @@
                         },
                         "jsonschema": {
                             "urlPath": "Category/OSWe0572f2791844010962886b892970b4d.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
-                    "name": "OSWb3b9ec5cb50d401c9b996ce3009b5c54",
-                    "label": "EnvironmentalTestChamber",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSWb3b9ec5cb50d401c9b996ce3009b5c54.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSWb3b9ec5cb50d401c9b996ce3009b5c54.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSWb3b9ec5cb50d401c9b996ce3009b5c54.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSWb3b9ec5cb50d401c9b996ce3009b5c54.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSWb3b9ec5cb50d401c9b996ce3009b5c54.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
-                    "name": "OSW50c8314e8b2c416db73ce935f1dd8d22",
-                    "label": "ChemicalSystem",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW50c8314e8b2c416db73ce935f1dd8d22.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW50c8314e8b2c416db73ce935f1dd8d22.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW50c8314e8b2c416db73ce935f1dd8d22.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW50c8314e8b2c416db73ce935f1dd8d22.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW50c8314e8b2c416db73ce935f1dd8d22.slot_jsonschema.json"
                         }
                     }
                 },
