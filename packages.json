@@ -62,26 +62,6 @@
                     }
                 },
                 {
-                    "name": "OSW0583b134c618484c9911a3dff145c7eb",
-                    "label": "ChemicalSubstance",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
                     "name": "OSW2afce49fe800460a95cf480cc0656757",
                     "label": "ChemicalSubstanceType",
                     "namespace": "NS_CATEGORY",
@@ -102,45 +82,22 @@
                     }
                 },
                 {
-                    "name": "OSWda27e2fff10848ebb728ffb69c49a16d",
-                    "label": "DataTool",
+                    "name": "OSW0583b134c618484c9911a3dff145c7eb",
+                    "label": "ChemicalSubstance",
                     "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_main.wikitext",
+                    "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_main.wikitext",
                     "slots": {
                         "footer": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_footer.wikitext"
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_footer.wikitext"
                         },
                         "header": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_header.wikitext"
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_header.wikitext"
                         },
                         "jsondata": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_jsondata.json"
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsondata.json"
                         },
                         "jsonschema": {
-                            "urlPath": "Category/OSWda27e2fff10848ebb728ffb69c49a16d.slot_jsonschema.json"
-                        }
-                    }
-                },
-                {
-                    "name": "OSW156137fa74914572ad2998f7f6594bca",
-                    "label": "DataDevice",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header.wikitext"
-                        },
-                        "header_template": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header_template.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_jsonschema.json"
+                            "urlPath": "Category/OSW0583b134c618484c9911a3dff145c7eb.slot_jsonschema.json"
                         }
                     }
                 },
@@ -391,6 +348,29 @@
                     }
                 },
                 {
+                    "name": "OSW156137fa74914572ad2998f7f6594bca",
+                    "label": "DataDevice",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header.wikitext"
+                        },
+                        "header_template": {
+                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header_template.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
                     "name": "HasCount",
                     "label": "HasCount",
                     "namespace": "SMW_NS_PROPERTY",
@@ -574,23 +554,6 @@
                         },
                         "jsondata": {
                             "urlPath": "Property/HasPricePerUnit.slot_jsondata.json"
-                        }
-                    }
-                },
-                {
-                    "name": "HasRiskAssessment",
-                    "label": "HasRiskAssessment",
-                    "namespace": "SMW_NS_PROPERTY",
-                    "urlPath": "Property/HasRiskAssessment.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Property/HasRiskAssessment.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Property/HasRiskAssessment.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Property/HasRiskAssessment.slot_jsondata.json"
                         }
                     }
                 }

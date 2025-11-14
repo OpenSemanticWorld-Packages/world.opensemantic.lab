@@ -1,15 +1,7 @@
 { 
     "title": "{{{name}}}",
-    "required": ["uuid"],
     "properties": { 
-        "uuid": {
-            "type": "string",
-            "format": "uuid",
-            "options": {
-                "hidden": true
-            }
-        } {{#if device_under_test}},
-        "device_under_test": {
+        } {{#if device_under_test}}"device_under_test": {
             "items": {
                 "options": {
                     "autocomplete": {
@@ -21,7 +13,7 @@
                 {{#each device_under_test}}"{{{device_under_test}}}{{{dut_default}}}"{{#unless @last}},
                 {{/unless}}{{/each}}
             ]
-        } {{/if}} {{#if tester}},
+        } {{/if}} {{#if tester}}{{#if device_under_test}},{{/if}}
         "tester": {
             "items": {
             	"properties": {
@@ -45,7 +37,7 @@
             	}{{#unless @last}},
                 {{/unless}}{{/each}}
             ]
-        } {{/if}} {{#if test_procedure}},
+        } {{/if}} {{#if test_procedure}}{{#if tester}}{{#if device_under_test}},{{/if}}{{/if}}
         "test_procedure": {
             "items": {
             	"properties": {

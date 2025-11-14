@@ -1,28 +1,25 @@
 { 
-    "title": "{{{name}}}",
-    "required": ["uuid"],
-    "properties": { 
-        "uuid": {
-            "type": "string",
-            "format": "uuid",
-            "options": {
-                "hidden": true
-            }
-        } {{#if collection_default}},
+    "defaultProperties": [{{#replace "^[\s]*,+|,+[\s]*$" "" "g"}}{{!-- Trim leading and trailing whitespace + comma --}} {{#if collection_default}}
+        "collection",{{/if}}{{#if display_id_default}}
+        "display_id",{{/if}}{{#if project_default}}
+        "project",{{/if}}{{#if keywords_default}}
+        "keywords",{{/if}}{{/replace}}
+    ],
+    "properties": { {{#replace "^[\s]*,+|,+[\s]*$" "" "g"}}{{!-- Trim leading and trailing whitespace + comma --}} {{#if collection_default}}
         "collection": {
             "default": "{{{collection_default}}}"
-        } {{/if}} {{#if display_id_default}},
+        },{{/if}} {{#if display_id_default}}
         "display_id": {
             "default": "{{{display_id_default}}}"
-        } {{/if}} {{#if project_default}},
+        },{{/if}} {{#if project_default}}
         "project": {
             "default": "{{{project_default}}}"
-        } {{/if}} {{#if keywords_default}},
+        },{{/if}} {{#if keywords_default}}
         "keywords": {
             "default": [
                 {{#each keywords_default}}"{{{.}}}"{{#unless @last}},
                 {{/unless}}{{/each}}
             ]
-        } {{/if}} 
+        },{{/if}}{{/replace}}
     } 
 }

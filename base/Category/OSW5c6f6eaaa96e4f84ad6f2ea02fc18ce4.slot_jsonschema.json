@@ -200,7 +200,8 @@
                     "format": "uuid",
                     "options": {
                         "hidden": true
-                    }
+                    },
+                    "title": "UUID"
                 },
                 "source": {
                     "title": "Source",
@@ -264,7 +265,8 @@
                                 "format": "uuid",
                                 "options": {
                                     "hidden": true
-                                }
+                                },
+                                "title": "UUID"
                             },
                             "weather_date": {
                                 "type": "string",
@@ -343,7 +345,8 @@
                     "format": "uuid",
                     "options": {
                         "hidden": true
-                    }
+                    },
+                    "title": "UUID"
                 },
                 "sampling_type": {
                     "title": "Sampling type",
@@ -442,7 +445,8 @@
                         "format": "uuid",
                         "options": {
                             "hidden": true
-                        }
+                        },
+                        "title": "UUID"
                     },
                     "sample_type": {
                         "title": "Type",
@@ -512,7 +516,8 @@
                     "format": "uuid",
                     "options": {
                         "hidden": true
-                    }
+                    },
+                    "title": "UUID"
                 },
                 "transport_description": {
                     "title": "Description",

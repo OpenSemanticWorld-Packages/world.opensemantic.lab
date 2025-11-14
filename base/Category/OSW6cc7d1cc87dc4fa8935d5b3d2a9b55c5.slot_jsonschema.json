@@ -106,7 +106,8 @@
                         "format": "uuid",
                         "options": {
                             "hidden": true
-                        }
+                        },
+                        "title": "UUID"
                     },
                     "dut_type": {
                         "title": "Type",
@@ -181,7 +182,8 @@
                         "format": "uuid",
                         "options": {
                             "hidden": true
-                        }
+                        },
+                        "title": "UUID"
                     },
                     "tester_type": {
                         "title": "Type",
@@ -278,7 +280,8 @@
                         "format": "uuid",
                         "options": {
                             "hidden": true
-                        }
+                        },
+                        "title": "UUID"
                     },
                     "procedure_type": {
                         "title": "Type",
