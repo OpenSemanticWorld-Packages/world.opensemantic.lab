@@ -12,12 +12,29 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "requiredPackages": [
                 "world.opensemantic.base"
             ],
             "baseURL": "https://raw.githubusercontent.com/OpenSemanticWorld-Packages/world.opensemantic.lab/main/base/",
             "pages": [
+                {
+                    "name": "OSWd09a59874187410180d12004239898cd",
+                    "label": "WorldOpensemanticLab",
+                    "namespace": "NS_ITEM",
+                    "urlPath": "Item/OSWd09a59874187410180d12004239898cd.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Item/OSWd09a59874187410180d12004239898cd.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Item/OSWd09a59874187410180d12004239898cd.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Item/OSWd09a59874187410180d12004239898cd.slot_jsondata.json"
+                        }
+                    }
+                },
                 {
                     "name": "OSW182916df3eee472e88e7c8d114a7fe27",
                     "label": "MaterialType",
@@ -358,9 +375,6 @@
                         },
                         "header": {
                             "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header.wikitext"
-                        },
-                        "header_template": {
-                            "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_header_template.wikitext"
                         },
                         "jsondata": {
                             "urlPath": "Category/OSW156137fa74914572ad2998f7f6594bca.slot_jsondata.json"

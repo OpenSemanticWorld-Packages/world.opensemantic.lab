@@ -1,0 +1,55 @@
+{
+    "type": [
+        "Category:OSW31a9c96c1f444f84b944d49afbce409b"
+    ],
+    "uuid": "d09a5987-4187-4101-80d1-2004239898cd",
+    "name": "WorldOpensemanticLab",
+    "label": [
+        {
+            "text": "world.opensemantic.lab",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "text": "For material science, etc.",
+            "lang": "en"
+        }
+    ],
+    "global_id": "world.opensemantic.lab",
+    "version": "0.6.2",
+    "url": [
+        "https://github.com/OpenSemanticWorld-Packages/world.opensemantic.lab"
+    ],
+    "parts": [
+        "Item:OSWd09a59874187410180d12004239898cd",
+        "Category:OSW182916df3eee472e88e7c8d114a7fe27",
+        "Category:OSW31ca9a739cb24079b36824045c0832aa",
+        "Category:OSW2afce49fe800460a95cf480cc0656757",
+        "Category:OSW0583b134c618484c9911a3dff145c7eb",
+        "Category:OSW25ab317fa369435797b7a92c9fd3bde6",
+        "Category:OSW5c6f6eaaa96e4f84ad6f2ea02fc18ce4",
+        "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3",
+        "Category:OSW29f0a4619cc243679e68b682d3bdb890",
+        "Category:OSW61d19dea4b9c4de8bcbde8036fc0e0a6",
+        "Category:OSW0e7fab2262fb4427ad0fa454bc868a0d",
+        "Category:OSW6cc7d1cc87dc4fa8935d5b3d2a9b55c5",
+        "Category:OSWfa914762adaa4665a63b6a77c3ea6eed",
+        "Category:OSW293552368bcf4a3681682671f8d47d8f",
+        "Category:OSWb8435fabafcb48f985422448e9df5faa",
+        "Category:OSWe2d16d21532a40cfa0abe577629d5c37",
+        "Category:OSWe0572f2791844010962886b892970b4d",
+        "Category:OSW156137fa74914572ad2998f7f6594bca",
+        "Property:HasCount",
+        "Property:HasMass",
+        "Property:HasVolume",
+        "Property:HasMassConcentration",
+        "Property:HasMonetaryValue",
+        "Property:HasGravimetricMonetaryValue",
+        "Property:HasPricePerWeight",
+        "Property:HasVolumetricMonetaryValue",
+        "Property:HasPricePerVolume",
+        "Property:HasPerUnitMonetaryValue",
+        "Property:HasPricePerUnit"
+    ]
+}
