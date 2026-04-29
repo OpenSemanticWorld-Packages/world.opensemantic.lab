@@ -1,0 +1,114 @@
+{
+    "@context": [
+        "/wiki/Category:OSWda27e2fff10848ebb728ffb69c49a16d?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWda27e2fff10848ebb728ffb69c49a16d?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "89fda9fe-d80b-41b1-ad4c-0c011e645600",
+    "title": "OpcUaServer",
+    "title*": {
+        "en": "OPC-UA Server",
+        "de": "OPC-UA Server"
+    },
+    "description": "Implements the OPC Unified Architecture (OPC UA) Specification",
+    "description*": {
+        "en": "Implements the OPC Unified Architecture (OPC UA) Specification",
+        "de": "Implements the OPC Unified Architecture (OPC UA) Specification"
+    },
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [
+        "data_channels"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW89fda9fed80b41b1ad4c0c011e645600"
+            ]
+        },
+        "data_channels": {
+            "items": {
+                "id": "channel",
+                "allOf": [
+                    {
+                        "$ref": "/wiki/Category:OSWda27e2fff10848ebb728ffb69c49a16d?action=raw&slot=jsonschema#/properties/data_channels/items"
+                    }
+                ],
+                "title": "OpcUaDataChannel",
+                "headerTemplate": "{{ i1 }} - {{{ self.node_id }}} {{{ self.name }}}",
+                "required": [
+                    "node_id"
+                ],
+                "defaultProperties": [
+                    "opcua_data_type",
+                    "client_mode",
+                    "sampling_interval_in_milliseconds",
+                    "refresh_interval_in_milliseconds"
+                ],
+                "properties": {
+                    "node_id": {
+                        "title": "Node ID",
+                        "type": "string"
+                    },
+                    "opcua_data_type": {
+                        "title": "OPC-UA data type",
+                        "type": "string",
+                        "enum": [
+                            "Null",
+                            "Boolean",
+                            "SByte",
+                            "Byte",
+                            "Int16",
+                            "UInt16",
+                            "Int32",
+                            "UInt32",
+                            "Int64",
+                            "UInt64",
+                            "Float",
+                            "Double",
+                            "String",
+                            "DateTime",
+                            "Guid",
+                            "ByteString",
+                            "XmlElement",
+                            "NodeId",
+                            "ExpandedNodeId",
+                            "StatusCode",
+                            "QualifiedName",
+                            "LocalizedText",
+                            "ExtensionObject",
+                            "DataValue",
+                            "Variant",
+                            "DiagnosticInfo"
+                        ]
+                    },
+                    "client_mode": {
+                        "description": "Enum for the different client modes.",
+                        "enum": [
+                            "Disabled",
+                            "Read",
+                            "RegisteredRead",
+                            "Subscription"
+                        ],
+                        "title": "OpcUaClientMode",
+                        "type": "string"
+                    },
+                    "sampling_interval_in_milliseconds": {
+                        "type": "integer",
+                        "default": 0,
+                        "title": "Sampling interval [ms]"
+                    },
+                    "refresh_interval_in_milliseconds": {
+                        "type": "integer",
+                        "title": "Refresh interval [ms]"
+                    }
+                }
+            }
+        }
+    }
+}

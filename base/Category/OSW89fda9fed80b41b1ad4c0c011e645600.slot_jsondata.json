@@ -1,0 +1,30 @@
+{
+    "subclass_of": [
+        "Category:OSWda27e2fff10848ebb728ffb69c49a16d"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "89fda9fe-d80b-41b1-ad4c-0c011e645600",
+    "label": [
+        {
+            "text": "OPC-UA Server",
+            "lang": "en"
+        },
+        {
+            "text": "OPC-UA Server",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Implements the OPC Unified Architecture (OPC UA) Specification",
+            "lang": "en"
+        },
+        {
+            "text": "Implements the OPC Unified Architecture (OPC UA) Specification",
+            "lang": "de"
+        }
+    ],
+    "name": "OpcUaServer"
+}

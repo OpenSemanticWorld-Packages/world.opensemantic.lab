@@ -16,15 +16,19 @@
             "lang": "en"
         }
     ],
+    "meta": {
+        "uuid": "0131d7ae-feb5-4ad7-bfee-38aac45a36f3",
+        "change_id": [
+            "bff78fe2-f467-4a37-962c-15b32d398796"
+        ]
+    },
     "global_id": "world.opensemantic.lab",
-    "version": "0.6.2",
+    "version": "0.7.0",
     "url": [
         "https://github.com/OpenSemanticWorld-Packages/world.opensemantic.lab"
     ],
     "parts": [
         "Item:OSWd09a59874187410180d12004239898cd",
-        "Category:OSW182916df3eee472e88e7c8d114a7fe27",
-        "Category:OSW31ca9a739cb24079b36824045c0832aa",
         "Category:OSW2afce49fe800460a95cf480cc0656757",
         "Category:OSW0583b134c618484c9911a3dff145c7eb",
         "Category:OSW25ab317fa369435797b7a92c9fd3bde6",
@@ -40,6 +44,7 @@
         "Category:OSWe2d16d21532a40cfa0abe577629d5c37",
         "Category:OSWe0572f2791844010962886b892970b4d",
         "Category:OSW156137fa74914572ad2998f7f6594bca",
+        "Category:OSW89fda9fed80b41b1ad4c0c011e645600",
         "Property:HasCount",
         "Property:HasMass",
         "Property:HasVolume",

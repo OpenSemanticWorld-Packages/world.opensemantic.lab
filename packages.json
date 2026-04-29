@@ -12,7 +12,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.6.2",
+            "version": "0.7.0",
             "requiredPackages": [
                 "world.opensemantic.base"
             ],
@@ -32,49 +32,6 @@
                         },
                         "jsondata": {
                             "urlPath": "Item/OSWd09a59874187410180d12004239898cd.slot_jsondata.json"
-                        }
-                    }
-                },
-                {
-                    "name": "OSW182916df3eee472e88e7c8d114a7fe27",
-                    "label": "MaterialType",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_jsonschema.json"
-                        },
-                        "schema_template": {
-                            "urlPath": "Category/OSW182916df3eee472e88e7c8d114a7fe27.slot_schema_template.text"
-                        }
-                    }
-                },
-                {
-                    "name": "OSW31ca9a739cb24079b36824045c0832aa",
-                    "label": "Material",
-                    "namespace": "NS_CATEGORY",
-                    "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_main.wikitext",
-                    "slots": {
-                        "footer": {
-                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_footer.wikitext"
-                        },
-                        "header": {
-                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_header.wikitext"
-                        },
-                        "jsondata": {
-                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_jsondata.json"
-                        },
-                        "jsonschema": {
-                            "urlPath": "Category/OSW31ca9a739cb24079b36824045c0832aa.slot_jsonschema.json"
                         }
                     }
                 },
@@ -361,6 +318,26 @@
                         },
                         "jsonschema": {
                             "urlPath": "Category/OSWe0572f2791844010962886b892970b4d.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSW89fda9fed80b41b1ad4c0c011e645600",
+                    "label": "OpcUaServer",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW89fda9fed80b41b1ad4c0c011e645600.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW89fda9fed80b41b1ad4c0c011e645600.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW89fda9fed80b41b1ad4c0c011e645600.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW89fda9fed80b41b1ad4c0c011e645600.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW89fda9fed80b41b1ad4c0c011e645600.slot_jsonschema.json"
                         }
                     }
                 },
