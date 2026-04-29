@@ -17,13 +17,13 @@
         }
     ],
     "meta": {
-        "uuid": "0131d7ae-feb5-4ad7-bfee-38aac45a36f3",
+        "uuid": "e6daf485-d3d2-4fd8-9f5b-31dc6983ca57",
         "change_id": [
-            "bff78fe2-f467-4a37-962c-15b32d398796"
+            "d9023fb8-4cc3-408e-82e8-71eb7e0295e9"
         ]
     },
     "global_id": "world.opensemantic.lab",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "url": [
         "https://github.com/OpenSemanticWorld-Packages/world.opensemantic.lab"
     ],

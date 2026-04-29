@@ -47,8 +47,8 @@
                 "defaultProperties": [
                     "opcua_data_type",
                     "client_mode",
-                    "sampling_interval_in_milliseconds",
-                    "refresh_interval_in_milliseconds"
+                    "sampling_interval",
+                    "refresh_interval"
                 ],
                 "properties": {
                     "node_id": {
@@ -98,14 +98,19 @@
                         "title": "OpcUaClientMode",
                         "type": "string"
                     },
-                    "sampling_interval_in_milliseconds": {
-                        "type": "integer",
-                        "default": 0,
-                        "title": "Sampling interval [ms]"
+                    "sampling_interval": {
+                        "title": "Sampling interval",
+                        "title*": {
+                            "de": "Abtastintervall"
+                        },
+                        "$ref": "/wiki/Category:OSW389cb87d31be515aa5d2f12e2b66e938?action=raw&slot=jsonschema"
                     },
-                    "refresh_interval_in_milliseconds": {
-                        "type": "integer",
-                        "title": "Refresh interval [ms]"
+                    "refresh_interval": {
+                        "title": "Refresh interval",
+                        "title*": {
+                            "de": "Aktualisierungsintervall"
+                        },
+                        "$ref": "/wiki/Category:OSW389cb87d31be515aa5d2f12e2b66e938?action=raw&slot=jsonschema"
                     }
                 }
             }
