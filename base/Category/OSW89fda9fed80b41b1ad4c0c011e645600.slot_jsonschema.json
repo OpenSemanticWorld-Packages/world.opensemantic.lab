@@ -1,6 +1,20 @@
 {
     "@context": [
-        "/wiki/Category:OSWda27e2fff10848ebb728ffb69c49a16d?action=raw&slot=jsonschema"
+        "/wiki/Category:OSWda27e2fff10848ebb728ffb69c49a16d?action=raw&slot=jsonschema",
+        {
+            "data_channels": {
+                "@context": {
+                    "node_id": {
+                        "@id": "Property:HasId",
+                        "@type": "xsd:string"
+                    },
+                    "subchannels": {
+                        "@id": "Property:HasPart",
+                        "@type": "@id"
+                    }
+                }
+            }
+        }
     ],
     "allOf": [
         {
@@ -23,6 +37,7 @@
         "type"
     ],
     "defaultProperties": [
+        "url",
         "data_channels"
     ],
     "properties": {
@@ -30,6 +45,18 @@
             "default": [
                 "Category:OSW89fda9fed80b41b1ad4c0c011e645600"
             ]
+        },
+        "url": {
+            "title": "URL",
+            "title*": {
+                "de": "URL"
+            },
+            "description": "The endpoint URL of the OPC-UA server (e.g. opc.tcp://hostname:4840)",
+            "description*": {
+                "de": "Die Endpunkt-URL des OPC-UA Servers (z.B. opc.tcp://hostname:4840)"
+            },
+            "type": "string",
+            "format": "url"
         },
         "data_channels": {
             "items": {
@@ -56,7 +83,11 @@
                         "type": "string"
                     },
                     "opcua_data_type": {
-                        "title": "OPC-UA data type",
+                        "title": "OpcUaDataType",
+                        "title*": {
+                            "en": "OPC-UA data type",
+                            "de": "OPC-UA Datentyp"
+                        },
                         "type": "string",
                         "enum": [
                             "Null",
@@ -111,6 +142,30 @@
                             "de": "Aktualisierungsintervall"
                         },
                         "$ref": "/wiki/Category:OSW389cb87d31be515aa5d2f12e2b66e938?action=raw&slot=jsonschema"
+                    },
+                    "subchannels": {
+                        "title": "Subchannels",
+                        "title*": {
+                            "de": "Unterkanäle"
+                        },
+                        "description": "Subchannels are read automatically with the main channel, e.g. 'msg' with subchannel 'msg_ts' => {'msg': '...', 'msg_ts': '...'}. However, custom OPC-UA types are preferred over channel aggregation.",
+                        "description*": {
+                            "de": "Unterkanäle werden automatisch mit dem Hauptkanal gelesen, z.B. 'msg' mit Unterkanal 'msg_ts' => {'msg': '...', 'msg_ts': '...'}. Benutzerdefinierte OPC-UA-Typen sind jedoch der Kanalaggregation vorzuziehen."
+                        },
+                        "type": "array",
+                        "format": "table",
+                        "items": {
+                            "title": "Subchannel reference",
+                            "type": "string",
+                            "watch": {
+                                "_channels": "data_channels"
+                            },
+                            "enumSource": [{
+                                "source": "_channels",
+                                "title": "{{item.node_id}}",
+                                "value": "{{item.osw_id}}"
+                            }]
+                        }
                     }
                 }
             }
