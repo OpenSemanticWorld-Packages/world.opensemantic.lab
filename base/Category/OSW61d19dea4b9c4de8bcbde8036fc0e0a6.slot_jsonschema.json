@@ -6,7 +6,8 @@
                 "@id": "Property:HasCollection"
             },
             "keywords_default": {
-                "@id": "Property:HasKeyword"
+                "@id": "Property:HasKeyword",
+                "@type": "@id"
             },
             "project_default": {
                 "@id": "Property:HasProject",

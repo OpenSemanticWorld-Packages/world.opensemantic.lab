@@ -15,10 +15,10 @@
     ],
     "type": "object",
     "uuid": "25ab317f-a369-4357-97b7-a92c9fd3bde6",
-    "title": "SampleType",
+    "title": "MaterialSampleType",
     "title*": {
-        "en": "Sample type",
-        "de": "Probentyp"
+        "en": "Material sample type",
+        "de": "Material-Probentyp"
     },
     "description": "Type of a sample, e.g., the type number specified by the manufacturer",
     "description*": {

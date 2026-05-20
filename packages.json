@@ -12,7 +12,7 @@
             "globalID": "world.opensemantic.lab",
             "label": "OSW Lab",
             "description": "For material science, etc.",
-            "version": "0.8.0",
+            "version": "0.9.0",
             "requiredPackages": [
                 "world.opensemantic.base",
                 "world.opensemantic.characteristics.quantitative"
@@ -78,7 +78,7 @@
                 },
                 {
                     "name": "OSW25ab317fa369435797b7a92c9fd3bde6",
-                    "label": "SampleType",
+                    "label": "MaterialSampleType",
                     "namespace": "NS_CATEGORY",
                     "urlPath": "Category/OSW25ab317fa369435797b7a92c9fd3bde6.slot_main.wikitext",
                     "slots": {
@@ -363,6 +363,69 @@
                     }
                 },
                 {
+                    "name": "OSW8a43ad2381fc44e382bff2ada5e1f67f",
+                    "label": "ToolSetup",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_footer.wikitext"
+                        },
+                        "footer_template": {
+                            "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_footer_template.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSW8a43ad2381fc44e382bff2ada5e1f67f.slot_jsonschema.json"
+                        }
+                    }
+                },
+                                {
+                    "name": "OSWdd31b71b06915d0182e40d15953f3daa",
+                    "label": "Measurement Device",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSWdd31b71b06915d0182e40d15953f3daa.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSWdd31b71b06915d0182e40d15953f3daa.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSWdd31b71b06915d0182e40d15953f3daa.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSWdd31b71b06915d0182e40d15953f3daa.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSWdd31b71b06915d0182e40d15953f3daa.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
+                    "name": "OSWa4d7cfe85cc3498e87d7825efa831d65",
+                    "label": "DataCollectionProcess",
+                    "namespace": "NS_CATEGORY",
+                    "urlPath": "Category/OSWa4d7cfe85cc3498e87d7825efa831d65.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Category/OSWa4d7cfe85cc3498e87d7825efa831d65.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Category/OSWa4d7cfe85cc3498e87d7825efa831d65.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Category/OSWa4d7cfe85cc3498e87d7825efa831d65.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Category/OSWa4d7cfe85cc3498e87d7825efa831d65.slot_jsonschema.json"
+                        }
+                    }
+                },
+                {
                     "name": "HasCount",
                     "label": "HasCount",
                     "namespace": "SMW_NS_PROPERTY",
@@ -546,6 +609,26 @@
                         },
                         "jsondata": {
                             "urlPath": "Property/HasPricePerUnit.slot_jsondata.json"
+                        }
+                    }
+                },
+                {
+                    "name": "HasRawData",
+                    "label": "HasRawData",
+                    "namespace": "SMW_NS_PROPERTY",
+                    "urlPath": "Property/HasRawData.slot_main.wikitext",
+                    "slots": {
+                        "footer": {
+                            "urlPath": "Property/HasRawData.slot_footer.wikitext"
+                        },
+                        "header": {
+                            "urlPath": "Property/HasRawData.slot_header.wikitext"
+                        },
+                        "jsondata": {
+                            "urlPath": "Property/HasRawData.slot_jsondata.json"
+                        },
+                        "jsonschema": {
+                            "urlPath": "Property/HasRawData.slot_jsonschema.json"
                         }
                     }
                 }

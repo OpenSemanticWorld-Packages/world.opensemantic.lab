@@ -1,0 +1,16 @@
+{
+    "uuid": "ae9a80ca-8497-4d9c-949c-7bccfdebba7b",
+    "title": "HasRawData",
+    "title*": {
+        "en": "HasRawData",
+        "de": "HatRohDaten"
+    },
+    "description": "Links a subject with a file or files that represent the raw data, e.g. when the subject is a measurement process",
+    "description*": {
+        "en": "Links a subject with a file or files that represent the raw data, e.g. when the subject is a measurement process",
+        "de": "Verknüpft ein Subjekt mit einer oder mehreren Dateien, die die Rohdaten darstellen, z. B. wenn es sich bei dem Thema um einen Messvorgang handelt."
+    },
+    "type": "string",
+    "format": "autocomplete",
+    "range": "Category:OSWff333fd349af4f65a69100405a9e60c7"
+}

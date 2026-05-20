@@ -1,0 +1,31 @@
+{
+    "type": [
+        "Category:ObjectProperty"
+    ],
+    "range": [
+        "Category:OSWff333fd349af4f65a69100405a9e60c7"
+    ],
+    "name": "HasRawData",
+    "property_type": "Page",
+    "uuid": "ae9a80ca-8497-4d9c-949c-7bccfdebba7b",
+    "label": [
+        {
+            "text": "HasRawData",
+            "lang": "en"
+        },
+        {
+            "text": "HatRohDaten",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "Links a subject with a file or files that represent the raw data, e.g. when the subject is a measurement process",
+            "lang": "en"
+        },
+        {
+            "text": "Verknüpft ein Subjekt mit einer oder mehreren Dateien, die die Rohdaten darstellen, z. B. wenn es sich bei dem Thema um einen Messvorgang handelt.",
+            "lang": "de"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "@context": [
+        {},
+        "/wiki/Category:OSWe427aafafbac4262955b9f690a83405d?action=raw&slot=jsonschema"
+    ],
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSWe427aafafbac4262955b9f690a83405d?action=raw&slot=jsonschema"
+        }
+    ],
+    "type": "object",
+    "uuid": "8a43ad23-81fc-44e3-82bf-f2ada5e1f67f",
+    "title": "ToolSetup",
+    "title*": {
+        "en": "Tool setup",
+        "de": "Werkzeugsetup"
+    },
+    "description": "A set or arrangement of tools for a specific purpose",
+    "description*": {
+        "en": "A set or arrangement of tools for a specific purpose",
+        "de": "Ein Satz oder eine Anordnung von Werkzeugen für einen bestimmten Zweck"
+    },
+    "required": [
+        "type"
+    ],
+    "defaultProperties": [],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSW8a43ad2381fc44e382bff2ada5e1f67f"
+            ]
+        }
+    }
+}

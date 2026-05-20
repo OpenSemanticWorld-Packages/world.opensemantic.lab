@@ -1,0 +1,33 @@
+{
+    "subclass_of": [
+        "Category:OSWe427aafafbac4262955b9f690a83405d"
+    ],
+    "type": [
+        "Category:Category"
+    ],
+    "uuid": "8a43ad23-81fc-44e3-82bf-f2ada5e1f67f",
+    "label": [
+        {
+            "text": "Tool setup",
+            "lang": "en"
+        },
+        {
+            "text": "Werkzeugsetup",
+            "lang": "de"
+        }
+    ],
+    "description": [
+        {
+            "text": "A set or arrangement of tools for a specific purpose",
+            "lang": "en"
+        },
+        {
+            "text": "Ein Satz oder eine Anordnung von Werkzeugen für einen bestimmten Zweck",
+            "lang": "de"
+        }
+    ],
+    "name": "ToolSetup",
+    "utf8_icon": [
+        "🧰"
+    ]
+}

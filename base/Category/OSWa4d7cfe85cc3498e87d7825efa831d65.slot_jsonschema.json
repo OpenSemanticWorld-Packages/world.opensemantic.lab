@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "/wiki/Category:OSW1679d6f04b9a477d9a3fd8a1821be928?action=raw&slot=jsonschema"
+        }
+    ],
+    "title": "DataCollectionProcess",
+    "required": [
+        "type"
+    ],
+    "properties": {
+        "type": {
+            "default": [
+                "Category:OSWa4d7cfe85cc3498e87d7825efa831d65"
+            ]
+        }
+    }
+}

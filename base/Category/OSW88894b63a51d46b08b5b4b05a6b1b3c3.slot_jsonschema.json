@@ -1,53 +1,321 @@
 {
     "@context": [
-        "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema",
+        "/wiki/Category:OSW37a57741ae2e4dd4b29b1172b6848be8?action=raw&slot=jsonschema",
         {
             "components*": "Property:HasStatement",
-            "predicate": {
-                "@type": "@id",
-                "@id": "Property:HasProperty"
-            },
             "object": {
                 "@type": "@id",
                 "@id": "Property:HasObject"
             },
-            "substatements": {
+            "predicate": {
                 "@type": "@id",
-                "@id": "Property:HasStatement"
+                "@id": "Property:HasProperty"
             },
             "quantity": {
                 "@type": "@id",
                 "@id": "Property:HasProperty"
             },
-            "value": "Property:HasObject",
-            "unit": "Property:HasUnit"
+            "sampling_process": {
+                "@id": "Property:HasSourceProcess",
+                "@type": "@id"
+            },
+            "serial_no": "Property:HasSerialNumber",
+            "shipping_process": {
+                "@id": "Property:IsPartOf",
+                "@type": "@id"
+            },
+            "storages": {
+                "@id": "Property:HasStatement",
+                "@type": "@id",
+                "@context": {
+                    "storage_instance_property": "Property:HasProperty",
+                    "storage_instance": "Property:HasObject"
+                }
+            },
+            "substatements": {
+                "@type": "@id",
+                "@id": "Property:HasStatement"
+            },
+            "unit": "Property:HasUnit",
+            "value": "Property:HasObject"
         }
     ],
     "allOf": [
         {
-            "$ref": "/wiki/Category:OSW31ca9a739cb24079b36824045c0832aa?action=raw&slot=jsonschema"
+            "$ref": "/wiki/Category:OSW37a57741ae2e4dd4b29b1172b6848be8?action=raw&slot=jsonschema"
         }
     ],
     "type": "object",
     "uuid": "88894b63-a51d-46b0-8b5b-4b05a6b1b3c3",
-    "title": "Sample",
+    "title": "MaterialSample",
     "title*": {
-        "en": "Sample",
-        "de": "Probe"
+        "en": "Material Sample",
+        "de": "Materialprobe"
     },
     "description": "Material sample created in the lab or collected in the field",
     "description*": {
         "en": "Material sample created in the lab or collected in the field",
         "de": "Im Labor erstellte oder im Feld gesammelte Materialprobe"
     },
+    "id": "root",
     "required": [
         "type"
     ],
+    "defaultProperties": [],
     "properties": {
         "type": {
             "default": [
                 "Category:OSW88894b63a51d46b08b5b4b05a6b1b3c3"
             ]
+        },
+        "humanreadable_id": {
+            "title": "Sample identifier",
+            "title*": {
+                "de": "Probenbezeichnung"
+            },
+            "description": "Unique identifier of the sample, human readable",
+            "description*": {
+                "de": "Einzigartige Bezeichnung der Probe, menschenlesbar"
+            },
+            "type": "string"
+        },
+        "serial_no": {
+            "allOf": [
+                {
+                    "$ref": "/wiki/JsonSchema:TypeNumber?action=raw&slot=main"
+                }
+            ]
+        },
+        "storages": {
+            "type": "array",
+            "format": "tabs",
+            "title": "Storages",
+            "title*": {
+                "de": "Lagerung"
+            },
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "{{=<% %>=}} <ul><%#storages%><li>[[<%storage_instance%>]] ({{#switch:{{USERLANGUAGECODE}}|en=Type|de=Typ|#default=Type}}: {{#ask:[[<%storage_instance%>]]|?HasType=|format=plain|mainlabel=-}})</li><%/storages%></ul>"
+                }
+            ],
+            "items": {
+                "type": "object",
+                "format": "grid-strict",
+                "title": "Storage",
+                "title*": {
+                    "de": "Lager"
+                },
+                "id": "storage",
+                "headerTemplate": "{{ i1 }}",
+                "defaultProperties": [],
+                "required": [
+                    "uuid",
+                    "storage_type",
+                    "storage_instance_property",
+                    "storage_instance"
+                ],
+                "properties": {
+                    "uuid": {
+                        "title": "UUID",
+                        "title*": {
+                            "de": "UUID"
+                        },
+                        "type": "string",
+                        "$comment": "format uuid field are copied, if not set in copy_ignore",
+                        "_format": "uuid",
+                        "_template": "dynamic_template",
+                        "dynamic_template": "{{_uuid_}}",
+                        "options": {
+                            "hidden": true,
+                            "dynamic_template": {
+                                "override": "empty"
+                            }
+                        }
+                    },
+                    "label": {
+                        "title": "Label",
+                        "title*": {
+                            "de": "Bezeichnung"
+                        },
+                        "description": "Designation of the function or role of the storage in this specific context.",
+                        "description*": {
+                            "de": "Bezeichnung der Funktion oder Rolle des Lagers in diesem spezifischen Kontext."
+                        },
+                        "type": "array",
+                        "format": "table",
+                        "eval_template": {
+                            "type": "mustache-wikitext",
+                            "mode": "render",
+                            "value": "{{=<% %>=}} {{#switch:{{USERLANGUAGECODE}} <%={{ }}=%> {{#label}} |{{lang}}={{text}} {{/label}} {{=<% %>=}} }}"
+                        },
+                        "items": {
+                            "eval_template": [
+                                {
+                                    "type": "wikitext",
+                                    "mode": "store",
+                                    "value": "{{{text}}}@{{{lang}}}"
+                                }
+                            ],
+                            "$ref": "/wiki/JsonSchema:Label?action=raw"
+                        },
+                        "options": {
+                            "grid_columns": 12
+                        },
+                        "propertyOrder": 20
+                    },
+                    "description": {
+                        "title": "Description",
+                        "title*": {
+                            "de": "Beschreibung"
+                        },
+                        "description": "Optional, additional details in this specific context.",
+                        "description*": {
+                            "de": "Optional, zusätzliche Angaben in diesem spezifischen Kontext."
+                        },
+                        "type": "array",
+                        "format": "table",
+                        "eval_template": {
+                            "type": "mustache-wikitext",
+                            "mode": "render",
+                            "value": "{{=<% %>=}} {{#switch:{{USERLANGUAGECODE}} <%={{ }}=%> {{#description}} |{{lang}}={{text}} {{/description}} {{=<% %>=}} }}"
+                        },
+                        "items": {
+                            "eval_template": [
+                                {
+                                    "type": "wikitext",
+                                    "mode": "store",
+                                    "value": "{{{text}}}@{{{lang}}}"
+                                }
+                            ],
+                            "$ref": "/wiki/JsonSchema:Description?action=raw"
+                        },
+                        "options": {
+                            "grid_columns": 12
+                        },
+                        "propertyOrder": 30
+                    },
+                    "storage_type": {
+                        "title": "Storage type",
+                        "title*": {
+                            "de": "Typ des Lagers"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "$comment": "Subclasses of Device",
+                        "subclassof_range": "Category:OSWf0fe562f422d49c6877490b3dfee2f3f",
+                        "options": {
+                            "grid_columns": 12
+                        },
+                        "default": "Category:OSWe427aafafbac4262955b9f690a83405d",
+                        "propertyOrder": 40
+                    },
+                    "storage_instance_property": {
+                        "type": "string",
+                        "default": "Property:IsStoredIn",
+                        "options": {
+                            "hidden": true
+                        }
+                    },
+                    "storage_instance": {
+                        "title": "Instance",
+                        "title*": {
+                            "de": "Instanz"
+                        },
+                        "type": "string",
+                        "format": "autocomplete",
+                        "range": "Category:OSWe427aafafbac4262955b9f690a83405d",
+                        "watch": {
+                            "storage_type_": "storage.storage_type"
+                        },
+                        "options": {
+                            "autocomplete": {
+                                "query": "[[$(storage_type_)]]|?Display_title_of=label|?HasImage=image|?HasDescription=description"
+                            },
+                            "grid_columns": 12
+                        },
+                        "propertyOrder": 50
+                    }
+                }
+            }
+        },
+        "sampling_process": {
+            "allOf": [
+                {
+                    "$ref": "/wiki/Category:OSW5c6f6eaaa96e4f84ad6f2ea02fc18ce4?action=raw&slot=jsonschema"
+                }
+            ],
+            "$comment": "Sampling goes here and replaces 'source'. 'source' is a duplicate of 'origin'!",
+            "title": "Sampling (Source process)",
+            "title*": {
+                "de": "Probennahme (Ursprungsprozess)"
+            },
+            "eval_template": [
+                {
+                    "type": "mustache-wikitext",
+                    "mode": "render",
+                    "value": "{{=<% %>=}} {{#ask: [[Category:OSW5c6f6eaaa96e4f84ad6f2ea02fc18ce4]][[HasOutput::{{FULLPAGENAME}}]]|format=plain}}"
+                }
+            ],
+            "defaultProperties": [],
+            "required": [],
+            "properties": {
+                "type": {
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "label": {
+                    "items": {
+                        "properties": {
+                            "text": {
+                                "watch": {
+                                    "root_uuid": "root.uuid"
+                                },
+                                "readonly": true,
+                                "dynamic_template": "Sampling of Item:OSW{{#replace '-' ''}}{{{root_uuid}}}{{/replace}}"
+                            },
+                            "lang": {
+                                "readonly": true
+                            }
+                        }
+                    },
+                    "options": {
+                        "hidden": true
+                    }
+                },
+                "description": {
+                    "description": "Description of the sampling process.",
+                    "description*": {
+                        "de": "Beschreibung der Probennahme"
+                    }
+                },
+                "output_samples": {
+                    "items": {
+                        "properties": {
+                            "sample_type": {
+                                "watch": {
+                                    "root_type": "root.type"
+                                },
+                                "dynamic_template": "{{{root_type}}}"
+                            },
+                            "sample_instance": {
+                                "watch": {
+                                    "root_uuid": "root.uuid"
+                                },
+                                "dynamic_template": "Item:OSW{{#replace '-' ''}}{{{root_uuid}}}{{/replace}}"
+                            }
+                        }
+                    },
+                    "minItems": 1,
+                    "maxItems": 1,
+                    "readonly": true,
+                    "options": {
+                        "hidden": true
+                    }
+                }
+            }
         },
         "components": {
             "type": "array",
@@ -88,7 +356,7 @@
                         "format": "autocomplete",
                         "title": "Predicate",
                         "title*": {
-                            "de": "Pr\u00e4dikat"
+                            "de": "Prädikat"
                         },
                         "options": {
                             "grid_columns": 4,

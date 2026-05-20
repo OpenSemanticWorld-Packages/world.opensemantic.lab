@@ -1,0 +1,8 @@
+==== {{#switch: {{USERLANGUAGECODE}}| de=Komponenten| #default=Components}} ==== 
+{{#ask:[[-HasPart::{{FULLPAGENAME}}]]
+|mainlabel={{#switch: {{USERLANGUAGECODE}}| de=Komponente| #default=Component}}
+|?HasType={{#switch: {{USERLANGUAGECODE}}| de=Typ| #default=Type}}
+|format=datatable}}
+
+<h2 class="section-collapsible-initial-collapsed section-heading--collapsed">{{#switch:{{USERLANGUAGECODE}}|en=Setup Graph|de=Setup Graph}}</h2>
+<div style="width: 100%;" class="InteractiveSemanticGraph" data-config='{ "root":"{{FULLPAGENAME}}", "properties":["HasPart", "HasTypicalProcess", "HasImage"], "ignore_properties":["Subcategory_of", "-Subcategory_of", "Has_query", "Display_title_of", "Display_title_of_lowercase", "Display_title_of_normalized"], "permalink":true, "depth":10, "edit": true, "edge_labels": false,  "query_limit":25}'></div>

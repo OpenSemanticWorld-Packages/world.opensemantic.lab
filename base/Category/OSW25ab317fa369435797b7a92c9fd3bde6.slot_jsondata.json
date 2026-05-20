@@ -8,11 +8,11 @@
     "uuid": "25ab317f-a369-4357-97b7-a92c9fd3bde6",
     "label": [
         {
-            "text": "Sample type",
+            "text": "Material sample type",
             "lang": "en"
         },
         {
-            "text": "Probentyp",
+            "text": "Material-Probentyp",
             "lang": "de"
         }
     ],
@@ -26,5 +26,5 @@
             "lang": "de"
         }
     ],
-    "name": "SampleType"
+    "name": "MaterialSampleType"
 }
